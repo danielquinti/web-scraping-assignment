@@ -10,3 +10,10 @@ class PruebaItem(scrapy.Item):
     text = scrapy.Field()
     author = scrapy.Field()
     tags = scrapy.Field()
+
+class PokeItem(scrapy.Item):
+    number = scrapy.Field()
+    name = scrapy.Field()
+    gen = scrapy.Field()
+    category = scrapy.Field()
+    types = scrapy.Field()

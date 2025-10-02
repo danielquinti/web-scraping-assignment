@@ -9,7 +9,7 @@ import json
 
 class JsonWriterPipeline:
     def open_spider(self, spider):
-        self.file = open('example.json', 'w')
+        self.file = open('poke.json', 'w')
         self.file.write('[')
         self.first_item = True
 
