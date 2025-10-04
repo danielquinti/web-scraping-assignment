@@ -35,3 +35,5 @@ class PokeItem(scrapy.Item):
     resistant = scrapy.Field()
     super_resistant = scrapy.Field()
     inmunity = scrapy.Field()
+
+    moves = scrapy.Field()

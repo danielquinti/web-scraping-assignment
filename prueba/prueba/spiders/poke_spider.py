@@ -27,6 +27,8 @@ class PokeSpider(scrapy.Spider):
         item['atk_sp'] = stats_table.xpath('.//tr[5]/td/text()').get().strip()
         item['df_sp'] = stats_table.xpath('.//tr[6]/td/text()').get().strip()
         item['vel'] = stats_table.xpath('.//tr[7]/td/text()').get().strip()
+
+        item['moves'] = [cell.strip() for row in response.css('table.movnivel tr') if (cell := row.css('td:nth-child(2) a::attr(title)').get())]
         
         weak_table = response.css('a[title="Súper débil"]').xpath('ancestor::tbody')
         item['super_weak'] = [x.replace("Tipo ", "").capitalize() for x in weak_table.xpath('.//tr[2]/td[3]/span/a/@title').getall()]
