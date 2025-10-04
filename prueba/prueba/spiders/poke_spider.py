@@ -28,8 +28,15 @@ class PokeSpider(scrapy.Spider):
         item['df_sp'] = stats_table.xpath('.//tr[6]/td/text()').get().strip()
         item['vel'] = stats_table.xpath('.//tr[7]/td/text()').get().strip()
 
-        item['moves'] = [cell.strip() for row in response.css('table.movnivel tr') if (cell := row.css('td:nth-child(2) a::attr(title)').get())]
-        
+        item['moves'] = [
+            {
+                'name': row.css('td:nth-child(2) a::attr(title)').get().strip(),
+                'type': row.css('td:nth-child(3) a::attr(title)').get().strip().replace('Tipo', '').strip(),
+                'class': row.css('td:nth-child(4) a::attr(title)').get().strip().replace('Clase', '').strip()
+            }
+            for row in response.css('table.movnivel tr')[1:]  # skip header
+            if row.css('td:nth-child(2) a::attr(title)').get()
+        ]
         weak_table = response.css('a[title="Súper débil"]').xpath('ancestor::tbody')
         item['super_weak'] = [x.replace("Tipo ", "").capitalize() for x in weak_table.xpath('.//tr[2]/td[3]/span/a/@title').getall()]
         item['weak'] = [x.replace("Tipo ", "").capitalize() for x in weak_table.xpath('.//tr[3]/td[3]/span/a/@title').getall()]

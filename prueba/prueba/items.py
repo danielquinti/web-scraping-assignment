@@ -37,3 +37,8 @@ class PokeItem(scrapy.Item):
     inmunity = scrapy.Field()
 
     moves = scrapy.Field()
+
+class PokeMove(scrapy.Item):
+    name = scrapy.Field()
+    type = scrapy.Field()
+    attackClass = scrapy.Field()
