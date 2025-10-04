@@ -13,6 +13,7 @@ class PruebaItem(scrapy.Item):
 
 class PokeItem(scrapy.Item):
     number = scrapy.Field()
+    image_url = scrapy.Field()
     name = scrapy.Field()
     gen = scrapy.Field()
     category = scrapy.Field()
