@@ -20,9 +20,17 @@ class PokeItem(scrapy.Item):
     abilities = scrapy.Field()
     hidden_abilities = scrapy.Field()
     egg_groups = scrapy.Field()
+    
     ps = scrapy.Field()
     atk = scrapy.Field()
     df = scrapy.Field()
     atk_sp = scrapy.Field()
     df_sp = scrapy.Field()
     vel = scrapy.Field()
+    
+    super_weak = scrapy.Field()
+    weak = scrapy.Field()
+    normal_damage = scrapy.Field()
+    resistant = scrapy.Field()
+    super_resistant = scrapy.Field()
+    inmunity = scrapy.Field()

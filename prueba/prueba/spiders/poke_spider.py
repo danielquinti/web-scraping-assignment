@@ -19,12 +19,21 @@ class PokeSpider(scrapy.Spider):
         item['hidden_abilities'] = card.css('tr[title="Habilidad oculta"] td a::attr(title)').get()
         item['egg_groups'] = [x.strip() for x in card.css('tr[title="Grupos de Pokémon con los que puede reproducirse"] td::text').getall()]
         
-        item['ps'] = response.css('td[style="width:3em"]').xpath('ancestor::tbody').xpath('.//tr[2]/td/text()').get().strip()
-        item['atk'] = response.css('td[style="width:3em"]').xpath('ancestor::tbody').xpath('.//tr[3]/td/text()').get().strip()
-        item['df'] = response.css('td[style="width:3em"]').xpath('ancestor::tbody').xpath('.//tr[4]/td/text()').get().strip()
-        item['atk_sp'] = response.css('td[style="width:3em"]').xpath('ancestor::tbody').xpath('.//tr[5]/td/text()').get().strip()
-        item['df_sp'] = response.css('td[style="width:3em"]').xpath('ancestor::tbody').xpath('.//tr[6]/td/text()').get().strip()
-        item['vel'] = response.css('td[style="width:3em"]').xpath('ancestor::tbody').xpath('.//tr[7]/td/text()').get().strip()
+        stats_table = response.css('a[title="Lista de Pokémon con sus características base"]').xpath('ancestor::tbody')
+        item['ps'] = stats_table.xpath('.//tr[2]/td/text()').get().strip()
+        item['atk'] = stats_table.xpath('.//tr[3]/td/text()').get().strip()
+        item['df'] = stats_table.xpath('.//tr[4]/td/text()').get().strip()
+        item['atk_sp'] = stats_table.xpath('.//tr[5]/td/text()').get().strip()
+        item['df_sp'] = stats_table.xpath('.//tr[6]/td/text()').get().strip()
+        item['vel'] = stats_table.xpath('.//tr[7]/td/text()').get().strip()
+        
+        weak_table = response.css('a[title="Súper débil"]').xpath('ancestor::tbody')
+        item['super_weak'] = [x.replace("Tipo ", "").capitalize() for x in weak_table.xpath('.//tr[2]/td[3]/span/a/@title').getall()]
+        item['weak'] = [x.replace("Tipo ", "").capitalize() for x in weak_table.xpath('.//tr[3]/td[3]/span/a/@title').getall()]
+        item['normal_damage'] = [x.replace("Tipo ", "").capitalize() for x in weak_table.xpath('.//tr[4]/td[3]/span/a/@title').getall()]
+        item['resistant'] = [x.replace("Tipo ", "").capitalize() for x in weak_table.xpath('.//tr[5]/td[3]/span/a/@title').getall()]
+        item['super_resistant'] = [x.replace("Tipo ", "").capitalize() for x in weak_table.xpath('.//tr[6]/td[3]/span/a/@title').getall()]
+        item['inmunity'] = [x.replace("Tipo ", "").capitalize() for x in weak_table.xpath('.//tr[7]/td[3]/span/a/@title').getall()]
 
         yield item
 
