@@ -5,12 +5,6 @@
 
 import scrapy
 
-
-class PruebaItem(scrapy.Item):
-    text = scrapy.Field()
-    author = scrapy.Field()
-    tags = scrapy.Field()
-
 class PokeItem(scrapy.Item):
     number = scrapy.Field()
     image_url = scrapy.Field()

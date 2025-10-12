@@ -7,7 +7,7 @@
 # useful for handling different item types with a single interface
 import json
 
-class JsonWriterPipeline:
+class PokemonPipeline:
     def open_spider(self, spider):
         self.file = open('pokemon_index_data.json', 'w')
         self.file.write('[')
