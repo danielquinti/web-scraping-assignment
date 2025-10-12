@@ -54,3 +54,11 @@ class PokeCompleteMove(scrapy.Item):
     movement_damage = scrapy.Field()
     movement_precission = scrapy.Field()
     movement_power_points = scrapy.Field()
+
+class PokeObject(scrapy.Item):
+    image_url = scrapy.Field()
+    name = scrapy.Field()
+    name_english = scrapy.Field()
+    generation = scrapy.Field()
+    description = scrapy.Field()
+    

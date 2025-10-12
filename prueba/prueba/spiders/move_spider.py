@@ -92,8 +92,8 @@ def extract_row_from_tr(columns, force_move_class):
     item["number"] =  parse_int(columns[0])
     item["name"] = extract_name(columns[1])
     item["name_english"] = extract_name_english(columns[1])
-    item["generation"] = first_img_alt_or_a_title(columns[2])
-    item["description"] = columns[3].get_text("",strip = True)
+    item["generation"] = int(first_img_alt_or_a_title(columns[2]))
+    item["description"] = columns[3].get_text(" ",strip = True)
     item["movement_type"] = first_img_alt_or_a_title(columns[4]) if columns[4] else ""
     item["movement_class"] = "Ambas" if force_move_class else first_img_alt_or_a_title(columns[5])
     item["movement_damage"] = parse_int(columns[6])
