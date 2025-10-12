@@ -2,7 +2,7 @@ import scrapy
 from prueba.items import PokeItem
 
 class PokeSpider(scrapy.Spider):
-    name = "poke"
+    name = "pokemon"
 
     start_urls = ["https://www.wikidex.net/wiki/Bulbasaur"]
 

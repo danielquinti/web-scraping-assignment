@@ -1,0 +1,130 @@
+[{
+    "number": "0001",
+    "name": "Bulbasaur",
+    "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/43/latest/20190406170624/Bulbasaur.png/200px-Bulbasaur.png",
+    "gen": "Primera",
+    "category": "Semilla",
+    "types": [
+        "Planta",
+        "Veneno"
+    ],
+    "abilities": [
+        "Espesura"
+    ],
+    "hidden_abilities": "Clorofila",
+    "egg_groups": [
+        "Monstruo",
+        "Planta"
+    ],
+    "ps": "45",
+    "atk": "49",
+    "df": "49",
+    "atk_sp": "65",
+    "df_sp": "65",
+    "vel": "45",
+    "moves": [
+        {
+            "name": "Placaje",
+            "type": "normal",
+            "class": "f\u00edsico"
+        },
+        {
+            "name": "Gru\u00f1ido",
+            "type": "normal",
+            "class": "de estado"
+        },
+        {
+            "name": "L\u00e1tigo cepa",
+            "type": "planta",
+            "class": "f\u00edsico"
+        },
+        {
+            "name": "Desarrollo",
+            "type": "normal",
+            "class": "de estado"
+        },
+        {
+            "name": "Drenadoras",
+            "type": "planta",
+            "class": "de estado"
+        },
+        {
+            "name": "Hoja afilada",
+            "type": "planta",
+            "class": "f\u00edsico"
+        },
+        {
+            "name": "Polvo veneno",
+            "type": "veneno",
+            "class": "de estado"
+        },
+        {
+            "name": "Somn\u00edfero",
+            "type": "planta",
+            "class": "de estado"
+        },
+        {
+            "name": "Bomba germen",
+            "type": "planta",
+            "class": "f\u00edsico"
+        },
+        {
+            "name": "Derribo",
+            "type": "normal",
+            "class": "f\u00edsico"
+        },
+        {
+            "name": "Dulce aroma",
+            "type": "normal",
+            "class": "de estado"
+        },
+        {
+            "name": "S\u00edntesis",
+            "type": "planta",
+            "class": "de estado"
+        },
+        {
+            "name": "Abatidoras",
+            "type": "planta",
+            "class": "de estado"
+        },
+        {
+            "name": "Latigazo",
+            "type": "planta",
+            "class": "f\u00edsico"
+        },
+        {
+            "name": "Rayo solar",
+            "type": "planta",
+            "class": "especial"
+        }
+    ],
+    "super_weak": [],
+    "weak": [
+        "Fuego",
+        "Hielo",
+        "Ps\u00edquico",
+        "Volador"
+    ],
+    "normal_damage": [
+        "Acero",
+        "Bicho",
+        "Drag\u00f3n",
+        "Fantasma",
+        "Normal",
+        "Roca",
+        "Siniestro",
+        "Tierra",
+        "Veneno"
+    ],
+    "resistant": [
+        "Agua",
+        "El\u00e9ctrico",
+        "Hada",
+        "Lucha"
+    ],
+    "super_resistant": [
+        "Planta"
+    ],
+    "inmunity": []
+}
