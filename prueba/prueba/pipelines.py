@@ -9,7 +9,7 @@ import json
 
 class PokemonPipeline:
     def open_spider(self, spider):
-        self.file = open('pokemon_index_data.json', 'w')
+        self.file = open('elastic/indices/pokemon/index_data.json', 'w')
         self.file.write('[')
         self.first_item = True
 
@@ -27,7 +27,7 @@ class PokemonPipeline:
     
 class MovesPipeline:
     def open_spider(self, spider):
-        self.file = open('moves_index_data.json', 'w')
+        self.file = open('elastic/indices/moves/index_data.json', 'w')
         self.file.write('[')
         self.first_item = True
 
@@ -45,7 +45,7 @@ class MovesPipeline:
 
 class ObjectsPipeline:
     def open_spider(self, spider):
-        self.file = open('objects_index_data.json', 'w')
+        self.file = open('elastic/indices/objects/index_data.json', 'w')
         self.file.write('[')
         self.first_item = True
 
@@ -63,7 +63,7 @@ class ObjectsPipeline:
 
 class AbilitiesPipeline:
     def open_spider(self, spider):
-        self.file = open('abilities_index_data.json', 'w')
+        self.file = open('elastic/indices/abilities/index_data.json', 'w')
         self.file.write('[')
         self.first_item = True
 

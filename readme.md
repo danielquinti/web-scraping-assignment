@@ -18,6 +18,9 @@ From the root directory, run
 ```bash
 cd prueba
 scrapy crawl pokemon
+scrapy crawl moves
+scrapy crawl abilities
+scrapy crawl objects
 ```
 ### Indexing
 
