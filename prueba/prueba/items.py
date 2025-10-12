@@ -42,3 +42,15 @@ class PokeMove(scrapy.Item):
     name = scrapy.Field()
     type = scrapy.Field()
     attackClass = scrapy.Field()
+
+class PokeCompleteMove(scrapy.Item):
+    number = scrapy.Field()
+    name = scrapy.Field()
+    name_english = scrapy.Field()
+    generation = scrapy.Field()
+    description = scrapy.Field()
+    movement_type = scrapy.Field()
+    movement_class = scrapy.Field()
+    movement_damage = scrapy.Field()
+    movement_precission = scrapy.Field()
+    movement_power_points = scrapy.Field()

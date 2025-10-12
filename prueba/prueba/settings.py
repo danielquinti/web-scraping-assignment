@@ -60,6 +60,7 @@ COOKIES_ENABLED = False
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     "prueba.pipelines.JsonWriterPipeline": 1,
+    "prueba.pipelines.MovesPipeline": 1,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
