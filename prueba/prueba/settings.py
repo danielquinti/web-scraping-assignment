@@ -62,6 +62,7 @@ ITEM_PIPELINES = {
     "prueba.pipelines.JsonWriterPipeline": 1,
     "prueba.pipelines.MovesPipeline": 1,
     "prueba.pipelines.ObjectsPipeline": 1,
+    "prueba.pipelines.AbilitiesPipeline": 1
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

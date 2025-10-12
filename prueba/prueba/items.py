@@ -61,4 +61,14 @@ class PokeObject(scrapy.Item):
     name_english = scrapy.Field()
     generation = scrapy.Field()
     description = scrapy.Field()
+
+class Ability(scrapy.Item):
+    number = scrapy.Field()
+    name = scrapy.Field()
+    name_english = scrapy.Field()
+    generation = scrapy.Field()
+    description = scrapy.Field()
+    single_holders = scrapy.Field()
+    double_holders = scrapy.Field()
+    hidden_holders = scrapy.Field()
     
