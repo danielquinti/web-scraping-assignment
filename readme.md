@@ -26,6 +26,7 @@ scrapy crawl objects
 
 ```bash
 cd prueba/elastic
+docker pull docker.elastic.co/elasticsearch/elasticsearch:9.1.5 (only first time to dowload elasticsearch)
 docker compose up -d
 python3 create_and_populate_index.py --content indices/pokemon_index_data.json --name pokemon --settings indices/pokemon_index_config.json
 ```
@@ -39,7 +40,7 @@ https://chromewebstore.google.com/detail/multi-elasticsearch-heads/cpmmilfkofbei
 
 - Node 20.
 
-## Run
+### Run
 
 ```
 cd frontend-web
