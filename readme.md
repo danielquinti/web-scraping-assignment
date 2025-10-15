@@ -32,3 +32,17 @@ python3 create_and_populate_index.py --content indices/pokemon_index_data.json -
 
 ### Index monitoring
 https://chromewebstore.google.com/detail/multi-elasticsearch-heads/cpmmilfkofbeimbmgiclohpodggeheim
+
+## Frontend web
+
+### Requirements
+
+- Node 20.
+
+## Run
+
+```
+cd frontend-web
+npm install (only first time to download libraries)
+npm run dev
+```
