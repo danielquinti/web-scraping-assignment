@@ -28,7 +28,7 @@ scrapy crawl objects
 cd prueba/elastic
 docker pull docker.elastic.co/elasticsearch/elasticsearch:9.1.5 (only first time to dowload elasticsearch)
 docker compose up -d
-python3 create_and_populate_index.py --content indices/pokemon_index_data.json --name pokemon --settings indices/pokemon_index_config.json
+python3 create_and_populate_index.py --content indices/pokemon/index_data.json --name pokemon --mapping_file  indices/pokemon/index_mappings.json --settings indices/pokemon/index_config.json
 ```
 
 ### Index monitoring
