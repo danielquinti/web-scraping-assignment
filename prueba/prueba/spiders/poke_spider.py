@@ -12,7 +12,22 @@ class PokeSpider(scrapy.Spider):
         item['number'] = card.css('span#numeronacional::text').get()
         item['name'] = card.css('div#nombrepokemon.titulo::text').get()
         item['image_url'] = card.css('div.vnav_datos div.imagen img::attr(src)').get()
-        item['gen'] = card.css('tr[title="Generación en la que apareció por primera vez"] td a::text').get()
+        
+        gen_text = card.css('tr[title="Generación en la que apareció por primera vez"] td a::text').get().lower().strip()
+        gen_map = {
+            'primera': 1,
+            'segunda': 2,
+            'tercera': 3,
+            'cuarta': 4,
+            'quinta': 5,
+            'sexta': 6,
+            'séptima': 7,
+            'septima': 7,
+            'octava': 8,
+            'novena': 9
+        }
+        item['gen'] = gen_map.get(gen_text, 0)
+        
         item['category'] = card.css('tr[title="Categoría"] td::text').get().strip()
         item['types'] = [x.replace("Tipo ", "").capitalize() for x in card.css('tr[title="Tipos a los que pertenece"] td span a::attr(title)').getall()]
         
