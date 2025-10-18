@@ -1,9 +1,17 @@
-const Home = () => {
+import "./Home.css";
 
+const Home = () => {
     return (
-        <>
-            <h1 style={{textAlign: "center"}}>Bienvenido a Dexter</h1>
-        </>
+        <section className="home">
+            <div className="home__content">
+                <h1 className="home__title">
+                    Bienvenido a <span>Dexter</span>
+                </h1>
+                <p className="home__subtitle">
+                    Tu plataforma de consulta Pokemon.
+                </p>
+            </div>
+        </section>
     );
 }
 

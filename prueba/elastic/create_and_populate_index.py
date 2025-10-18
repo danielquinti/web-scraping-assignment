@@ -80,7 +80,7 @@ if __name__ == '__main__':
     parser.add_argument('--settings', required=True, help='Path to settings file')
     parser.add_argument('--url', default='http://localhost:9200', help='Elasticsearch URL')
     parser.add_argument('--id-field', default=None, help='If provided, use this field from each doc as _id')
-    parser.add_argument('--batch', type=int, default=1000, help='Batch size for bulk API (default 1000)')
+    parser.add_argument('--batch', type=int, default=1500, help='Batch size for bulk API (default 1000)')
     parser.add_argument('--recreate', action='store_true', help='Delete index before indexing')
     parser.add_argument('--mapping-file', default=None, help='Optional mapping JSON to create index with')
     args = parser.parse_args()

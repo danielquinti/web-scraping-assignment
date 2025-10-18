@@ -1,0 +1,40 @@
+.pokeitems {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.pokeitem-card {
+    background-color: var(--color-blanco);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: var(--spacing-md);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pokeitem-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.pokeitem-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.pokeitem-card h3 {
+    margin: var(--spacing-xs) 0;
+    font-size: 1.1rem;
+}
+
+.pokeitem-card p {
+    margin: var(--spacing-xs) 0;
+    font-size: 0.9rem;
+}
+
+.poke-number {
+    font-weight: bold;
+    color: var(--color-primario);
+}

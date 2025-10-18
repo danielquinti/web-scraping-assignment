@@ -8,6 +8,11 @@ services:
      - xpack.security.enrollment.enabled=false
      - discovery.type=single-node
      - ES_JAVA_OPTS= -Xms5g -Xmx5g
+     - http.cors.enabled=true
+     - http.cors.allow-origin="*"
+     - http.cors.allow-headers="*"
+     - http.cors.allow-credentials=true
+     - http.cors.allow-methods=OPTIONS,HEAD,GET,POST,PUT,DELETE
     ports:
       - "9200:9200"
       - "9300:9300"

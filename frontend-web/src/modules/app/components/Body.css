@@ -1,0 +1,5 @@
+.main {
+    flex: 1;
+    padding: var(--spacing-lg);
+    background-color: var(--color-gris-claro);
+}

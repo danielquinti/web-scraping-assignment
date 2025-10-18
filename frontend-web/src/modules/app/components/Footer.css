@@ -1,0 +1,7 @@
+.footer {
+    background-color: var(--color-oscuro);
+    color: var(--color-texto-footer);
+    text-align: center;
+    padding: var(--spacing-md) var(--spacing-lg);
+    flex-shrink: 0;
+}
