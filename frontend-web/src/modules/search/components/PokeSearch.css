@@ -105,3 +105,118 @@
     border-color: var(--color-oscuro);
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
+
+.poksearch__gens {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.gen-chip {
+    background-color: var(--color-gris-claro);
+    border: 1px solid var(--color-gris);
+    border-radius: 8px;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.gen-chip:hover {
+    background-color: var(--color-gris-hover);
+    transform: scale(1.05);
+}
+
+.gen-chip.selected {
+    background-color: #646cff;
+    color: white;
+    border-color: #535bf2;
+}
+
+/* Filtros de grupo huevo */
+.poksearch__egg-groups {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.egg-chip {
+    background-color: var(--color-gris-claro);
+    border: 1px solid var(--color-gris);
+    border-radius: 16px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.egg-chip:hover {
+    background-color: var(--color-gris-hover);
+}
+
+.egg-chip.selected {
+    background-color: #ffcb05; /* Amarillo Pokémon */
+    color: var(--color-oscuro);
+    border-color: #e6b800;
+    font-weight: 600;
+    box-shadow: 0 0 5px rgba(255, 203, 5, 0.6);
+}
+
+/* Filtros por estadísticas */
+.poksearch__stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.stat-filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.stat-filter label {
+    font-weight: 600;
+    min-width: 80px;
+}
+
+.stat-inputs {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stat-inputs input {
+    width: 70px;
+    padding: 0.3rem 0.4rem;
+    border: 1px solid var(--color-gris);
+    border-radius: 4px;
+    background-color: var(--color-gris-claro);
+    text-align: center;
+}
+
+.stat-inputs input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 4px rgba(59, 130, 246, 0.3);
+}
+
+/* Botón de reinicio */
+.poksearch__reset {
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.poksearch__reset:hover {
+    background-color: #d9363e;
+}

@@ -9,10 +9,34 @@ const ALL_TYPES = [
     'Lucha', 'Fantasma', 'Psíquico', 'Siniestro', 'Veneno', 'Bicho', 'Volador',
     'Hielo', 'Acero', 'Dragón', 'Hada'
 ];
+const ALL_EGG_GROUPS = [
+    'Monstruo', 'Planta', 'Bicho', 'Volador', 'Campo', 'Hada', 
+    'Humanoide', 'Agua 1', 'Agua 2', 'Agua 3', 'Mineral', 
+    'Amorfo', 'Ditto', 'Dragón', 'Desconocido'
+];
+const ALL_GENERATIONS = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const STAT_FIELDS = [
+    { key: 'ps', label: 'PS' },
+    { key: 'atk', label: 'Ataque' },
+    { key: 'df', label: 'Defensa' },
+    { key: 'atk_sp', label: 'At. Esp.' },
+    { key: 'df_sp', label: 'Def. Esp.' },
+    { key: 'vel', label: 'Velocidad' }
+];
 
 const PokeSearch = () => {
     const [keywords, setKeywords] = useState('');
     const [selectedTypes, setSelectedTypes] = useState([]);
+    const [selectedEggGroups, setSelectedEggGroups] = useState([]);
+    const [selectedGens, setSelectedGens] = useState([]);
+    const [statFilters, setStatFilters] = useState({
+        ps: { min: '', max: '' },
+        atk: { min: '', max: '' },
+        df: { min: '', max: '' },
+        atk_sp: { min: '', max: '' },
+        df_sp: { min: '', max: '' },
+        vel: { min: '', max: '' }
+    });
     const [result, setResult] = useState([]);
     const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
@@ -24,21 +48,52 @@ const PokeSearch = () => {
 
         const mustQueries = [];
 
-       // Búsqueda por nombre
+        // Búsqueda por nombre
         if (keywords.trim() !== '') {
             mustQueries.push({
                 match_phrase_prefix: { name: keywords.trim() }
             });
         }
 
-        // Filtro por tipos (modo AND)
+        // Filtro por tipos (AND)
         if (selectedTypes.length > 0) {
-            selectedTypes.forEach(type => {
-                mustQueries.push({
-                    term: { "types.keyword": type }
-                });
+            mustQueries.push({
+                bool: {
+                    must: selectedTypes.map(type => ({
+                        term: { "types": type }
+                    }))
+                }
             });
         }
+
+        // Filtro por huevos (AND)
+        if (selectedEggGroups.length > 0) {
+            mustQueries.push({
+                bool: {
+                    must: selectedEggGroups.map(egg_group => ({
+                        term: { "egg_groups": egg_group }
+                    }))
+                }
+            });
+        }
+
+        // Filtro por generaciones (OR)
+        if (selectedGens.length > 0) {
+            mustQueries.push({
+                terms: { "gen": selectedGens }
+            });
+        }
+
+        // Filtros por estadísticas (rango)
+        Object.entries(statFilters).forEach(([field, range]) => {
+            const conditions = {};
+            if (range.min !== '') conditions.gte = Number(range.min);
+            if (range.max !== '') conditions.lte = Number(range.max);
+            if (Object.keys(conditions).length > 0) {
+                mustQueries.push({ range: { [field]: conditions } });
+            }
+        });
+
 
         const query = {
             from: (page - 1) * PAGE_SIZE,
@@ -61,14 +116,13 @@ const PokeSearch = () => {
         }
 
         setLoading(false);
-
     };
 
     useEffect(() => {
         fetchPokemons();
         setPage(1);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [keywords, selectedTypes]);
+    }, [keywords, selectedTypes, selectedEggGroups, selectedGens]);
 
     useEffect(() => {
         fetchPokemons();
@@ -96,6 +150,42 @@ const PokeSearch = () => {
             }
         });
     };
+
+    const toggleEggGroup = eggGroup => {
+        setSelectedEggGroups(prev => {
+            if (prev.includes(eggGroup)) {
+                return prev.filter(e => e !== eggGroup);
+            } else if (prev.length < 2) {
+                return [...prev, eggGroup];
+            } else {
+                return prev; // no permitir más de 2
+            }
+        });
+    };
+
+    const toggleGen = gen => {
+        setSelectedGens(prev => {
+            if (prev.includes(gen)) {
+                return prev.filter(g => g !== gen);
+            } else {
+                return [...prev, gen];
+            }
+        });
+    };
+
+    /*const resetFilters = () => {
+        setSelectedTypes([]);
+        setSelectedEggGroups([]);
+        setSelectedGens([]);
+        setStatFilters({
+            ps: { min: '', max: '' },
+            atk: { min: '', max: '' },
+            df: { min: '', max: '' },
+            atk_sp: { min: '', max: '' },
+            df_sp: { min: '', max: '' },
+            vel: { min: '', max: '' }
+        });
+    };*/
 
     return (
         <div className="poksearch">
@@ -134,6 +224,91 @@ const PokeSearch = () => {
                                 </button>
                             ))}
                         </div>
+
+                        <p>Filtrar por grupo huevo (máx. 2):</p>
+                        <div className="poksearch__egg-groups">
+                            {ALL_EGG_GROUPS.map(group => (
+                                <button
+                                    key={group}
+                                    className={`egg-chip ${
+                                        selectedEggGroups.includes(group) ? 'selected' : ''
+                                    }`}
+                                    onClick={() => toggleEggGroup(group)}
+                                >
+                                    {group}
+                                </button>
+                            ))}
+                        </div>
+
+                        <p>Filtrar por generación:</p>
+                        <div className="poksearch__gens">
+                            {ALL_GENERATIONS.map(gen => (
+                                <button
+                                    key={gen}
+                                    className={`gen-chip ${
+                                        selectedGens.includes(gen)
+                                            ? 'selected'
+                                            : ''
+                                    }`}
+                                    onClick={() => toggleGen(gen)}
+                                >
+                                    Gen {gen}
+                                </button>
+                            ))}
+                        </div>
+
+                        <p>Filtrar por estadísticas:</p>
+                        <div className="poksearch__stats">
+                            {STAT_FIELDS.map(stat => (
+                                <div key={stat.key} className="stat-filter">
+                                    <label>{stat.label}</label>
+                                    <div className="stat-inputs">
+                                        <input
+                                            type="number"
+                                            min="0"
+                                            max="255"
+                                            placeholder="Mín"
+                                            value={statFilters[stat.key].min}
+                                            onChange={e =>
+                                                setStatFilters(prev => ({
+                                                    ...prev,
+                                                    [stat.key]: {
+                                                        ...prev[stat.key],
+                                                        min: e.target.value
+                                                    }
+                                                }))
+                                            }
+                                        />
+                                        <span>–</span>
+                                        <input
+                                            type="number"
+                                            min="0"
+                                            max="255"
+                                            placeholder="Máx"
+                                            value={statFilters[stat.key].max}
+                                            onChange={e =>
+                                                setStatFilters(prev => ({
+                                                    ...prev,
+                                                    [stat.key]: {
+                                                        ...prev[stat.key],
+                                                        max: e.target.value
+                                                    }
+                                                }))
+                                            }
+                                        />
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/*(selectedTypes.length > 0 || selectedGens.length > 0) && (
+                            <button
+                                className="poksearch__reset"
+                                onClick={resetFilters}
+                            >
+                                Reiniciar filtros
+                            </button>
+                        )*/}
                     </div>
                 )}
             </div>
