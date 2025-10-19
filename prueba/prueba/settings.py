@@ -58,12 +58,11 @@ COOKIES_ENABLED = False
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
+
 ITEM_PIPELINES = {
-    "prueba.pipelines.PokemonPipeline": 1,
-    "prueba.pipelines.MovesPipeline": 1,
-    "prueba.pipelines.ObjectsPipeline": 1,
-    "prueba.pipelines.AbilitiesPipeline": 1
+    'prueba.pipelines.GeneralPipeline': 1,
 }
+
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html

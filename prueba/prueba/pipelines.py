@@ -7,63 +7,9 @@
 # useful for handling different item types with a single interface
 import json
 
-class PokemonPipeline:
+class GeneralPipeline:
     def open_spider(self, spider):
-        self.file = open('elastic/indices/pokemon/index_data.json', 'w')
-        self.file.write('[')
-        self.first_item = True
-
-    def close_spider(self, spider):
-        self.file.write(']\n')
-        self.file.close()
-
-    def process_item(self, item, spider):
-        if not self.first_item:
-            self.file.write(',\n')
-        self.first_item = False
-        line = json.dumps(dict(item), indent=4)
-        self.file.write(line)
-        return item
-    
-class MovesPipeline:
-    def open_spider(self, spider):
-        self.file = open('elastic/indices/moves/index_data.json', 'w')
-        self.file.write('[')
-        self.first_item = True
-
-    def close_spider(self, spider):
-        self.file.write(']\n')
-        self.file.close()
-
-    def process_item(self, item, spider):
-        if not self.first_item:
-            self.file.write(',\n')
-        self.first_item = False
-        line = json.dumps(dict(item), indent=4)
-        self.file.write(line)
-        return item
-
-class ObjectsPipeline:
-    def open_spider(self, spider):
-        self.file = open('elastic/indices/objects/index_data.json', 'w')
-        self.file.write('[')
-        self.first_item = True
-
-    def close_spider(self, spider):
-        self.file.write(']\n')
-        self.file.close()
-
-    def process_item(self, item, spider):
-        if not self.first_item:
-            self.file.write(',\n')
-        self.first_item = False
-        line = json.dumps(dict(item), indent=4)
-        self.file.write(line)
-        return item
-
-class AbilitiesPipeline:
-    def open_spider(self, spider):
-        self.file = open('elastic/indices/abilities/index_data.json', 'w')
+        self.file = open(f'elastic/indices/{spider.name}/index_data.json', 'w')
         self.file.write('[')
         self.first_item = True
 
