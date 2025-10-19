@@ -1,48 +1,90 @@
 {
-        "mappings": {
+    "mappings": {
         "properties": {
-        "number": { "type": "integer" },
-        "name": {
-            "type": "text",
-            "analyzer": "folding_spanish",
-            "fields": { "keyword": { "type": "keyword", "ignore_above": 256 } }
-        },
-        "image_url":     { "type": "keyword", "index": false },
-        "gen":           { "type": "integer" },
-        "category":      { "type": "keyword" },
-
-        "types":         { "type": "keyword" },
-        "abilities":     { "type": "keyword" },
-        "hidden_abilities": { "type": "keyword" },
-        "egg_groups":    { "type": "keyword" },
-
-        "ps":            { "type": "integer" },
-        "atk":           { "type": "integer" },
-        "df":            { "type": "integer" },
-        "atk_sp":        { "type": "integer" },
-        "df_sp":         { "type": "integer" },
-        "vel":           { "type": "integer" },
-
-        "moves": {
-            "type": "nested",
-            "properties": {
-            "name":  { "type": "text", "analyzer": "folding_spanish", "fields": { "keyword": { "type": "keyword", "ignore_above":256 } } },
-            "type":  { "type": "keyword" },
-            "class": { "type": "keyword" }
+            "number": {
+                "type": "integer"
+            },
+            "name": {
+                "type": "text",
+                "analyzer": "folding_spanish"
+            },
+            "image_url": {
+                "type": "keyword",
+                "index": false
+            },
+            "gen": {
+                "type": "integer"
+            },
+            "category": {
+                "type": "keyword"
+            },
+            "types": {
+                "type": "keyword"
+            },
+            "abilities": {
+                "type": "keyword"
+            },
+            "hidden_abilities": {
+                "type": "keyword"
+            },
+            "egg_groups": {
+                "type": "keyword"
+            },
+            "ps": {
+                "type": "integer"
+            },
+            "atk": {
+                "type": "integer"
+            },
+            "df": {
+                "type": "integer"
+            },
+            "atk_sp": {
+                "type": "integer"
+            },
+            "df_sp": {
+                "type": "integer"
+            },
+            "vel": {
+                "type": "integer"
+            },
+            "moves": {
+                "type": "nested",
+                "properties": {
+                    "name": {
+                        "type": "text",
+                        "analyzer": "folding_spanish"
+                    },
+                    "type": {
+                        "type": "keyword"
+                    },
+                    "class": {
+                        "type": "keyword"
+                    }
+                }
+            },
+            "super_weak": {
+                "type": "keyword"
+            },
+            "weak": {
+                "type": "keyword"
+            },
+            "normal_damage": {
+                "type": "keyword"
+            },
+            "resistant": {
+                "type": "keyword"
+            },
+            "super_resistant": {
+                "type": "keyword"
+            },
+            "inmunity": {
+                "type": "keyword"
+            },
+            "suggest": {
+                "type": "completion",
+                "analyzer": "folding_spanish"
             }
-        },
-
-        "super_weak":     { "type": "keyword" },
-        "weak":           { "type": "keyword" },
-        "normal_damage":  { "type": "keyword" },
-        "resistant":      { "type": "keyword" },
-        "super_resistant":{ "type": "keyword" },
-        "inmunity":       { "type": "keyword" },
-
-        "suggest": {
-            "type": "completion",
-            "analyzer": "folding_spanish"
         }
-        }
-    } 
-  }
+    }
+}

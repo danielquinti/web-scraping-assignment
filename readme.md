@@ -27,7 +27,7 @@ scrapy crawl objects
 ```bash
 cd prueba/elastic
 docker compose up -d
-python3 create_and_populate_index.py --content indices/pokemon/index_data.json --name pokemon --mapping_file  indices/pokemon/index_mappings.json --settings indices/pokemon/index_config.json
+python3 create_and_populate_index.py --content indices/pokemon/index_data.json --index pokemon --mapping-file  indices/pokemon/index_mappings.json --settings indices/pokemon/index_config.json
 ```
 
 ### Index monitoring

@@ -24,7 +24,6 @@ def create_index(args, client):
 
 def generate_bulk_actions(docs, index_name, id_field= None):
     for doc in docs:
-        print(index_name)
         action = {"_index": index_name, "_source": doc}
         if id_field and id_field in doc:
             action["_id"] = str(doc[id_field])
@@ -39,7 +38,7 @@ def populate_index(args, client):
     for batch in chunked_iterable(docs_iter, args.batch):
         batch_num += 1
         actions = []
-        for a in generate_bulk_actions(batch, args.name, args.id_field):
+        for a in generate_bulk_actions(batch, args.index, args.id_field):
             actions.append(a)
         print(f"Sending batch {batch_num} with {len(batch)} docs (total so far: {min(batch_num*args.batch, total)})")
         success, errors = helpers.bulk(client, actions, raise_on_error=False, stats_only=False) if actions else (0, [])
@@ -63,8 +62,6 @@ def load_json_list(path: str) -> List[Dict[str, Any]]:
     with open(path, 'r', encoding='utf-8') as f:
         data = json.load(f)
     return data
-#es.indices.create(index = index_name, settings = settings, body=mapping)
-#print(f"Indice '{index_name}' creado con éxito.")
 
 def create_and_populate_index(args):
     client = Elasticsearch(hosts=[args.url])
@@ -76,7 +73,7 @@ def create_and_populate_index(args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Bulk-index a JSON list into Elasticsearch')
     parser.add_argument('--content', required=True, help='Path to JSON file')
-    parser.add_argument('--name', required=True, help='Target index name')
+    parser.add_argument('--index', required=True, help='Target index name')
     parser.add_argument('--settings', required=True, help='Path to settings file')
     parser.add_argument('--url', default='http://localhost:9200', help='Elasticsearch URL')
     parser.add_argument('--id-field', default=None, help='If provided, use this field from each doc as _id')
