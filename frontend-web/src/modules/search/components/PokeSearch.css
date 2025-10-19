@@ -165,9 +165,9 @@
 
 /* Filtros por estadísticas */
 .poksearch__stats {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem 1rem;
     margin-top: 1rem;
 }
 
@@ -175,28 +175,41 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    background: var(--color-gris-claro);
+    border: 1px solid var(--color-gris);
+    border-radius: 8px;
+    padding: 0.4rem 0.6rem;
+    box-sizing: border-box;
+    min-width: 0; /* para evitar overflow */
 }
 
 .stat-filter label {
     font-weight: 600;
-    min-width: 80px;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    color: var(--color-texto);
 }
 
 .stat-inputs {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.3rem;
 }
 
 .stat-inputs input {
-    width: 70px;
-    padding: 0.3rem 0.4rem;
+    width: 60px;
+    padding: 0.25rem 0.35rem;
     border: 1px solid var(--color-gris);
     border-radius: 4px;
-    background-color: var(--color-gris-claro);
+    font-size: 0.85rem;
+    background-color: var(--color-blanco);
     text-align: center;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-inputs span {
+    font-size: 0.85rem;
+    color: var(--color-gris-oscuro);
 }
 
 .stat-inputs input:focus {
@@ -204,6 +217,44 @@
     border-color: #3b82f6;
     box-shadow: 0 0 4px rgba(59, 130, 246, 0.3);
 }
+
+/* Responsive: 2 columnas en pantallas medianas, 1 en móviles */
+@media (max-width: 900px) {
+    .poksearch__stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .poksearch__stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Filtro de busqueda de mov */
+.poksearch__moves {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.poksearch__moves input {
+    padding: 0.6rem;
+    border: 1px solid var(--color-gris);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    width: 100%;
+    background-color: var(--color-blanco);
+    transition: 0.2s;
+}
+
+.poksearch__moves input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 4px rgba(59, 130, 246, 0.3);
+}
+
 
 /* Botón de reinicio */
 .poksearch__reset {

@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router';
 
 import Home from './Home';
-import {PokeSearch} from '../../search';
+import {PokeSearch, PokeDetails} from '../../search';
 
 import "./Body.css";
 
@@ -12,6 +12,7 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Home/>} />
                 <Route path="/pokemon" element={<PokeSearch/>} />
+                <Route path="/pokemon/:id" element={<PokeDetails/>} />
                 <Route path="/habilidades" element={<PokeSearch/>} />
                 <Route path="/movimientos" element={<PokeSearch/>} />
                 <Route path="/objetos" element={<PokeSearch/>} />

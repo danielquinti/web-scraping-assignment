@@ -11,6 +11,8 @@
     padding: var(--spacing-md);
     text-align: center;
     transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    color: inherit; /* Fuerza que herede el color desde .pokeitems o el contenedor */
 }
 
 .pokeitem-card:hover {

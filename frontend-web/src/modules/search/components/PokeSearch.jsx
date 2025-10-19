@@ -37,6 +37,7 @@ const PokeSearch = () => {
         df_sp: { min: '', max: '' },
         vel: { min: '', max: '' }
     });
+    const [moveKeyword, setMoveKeyword] = useState('');
     const [result, setResult] = useState([]);
     const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
@@ -94,10 +95,24 @@ const PokeSearch = () => {
             }
         });
 
+        // Filtro por movimiento
+        if (moveKeyword.trim() !== '') {
+            mustQueries.push({
+                nested: {
+                    path: "moves",
+                    query: {
+                        match_phrase_prefix: {
+                            "moves.name": moveKeyword.trim()
+                        }
+                    }
+                }
+            });
+        }
 
         const query = {
             from: (page - 1) * PAGE_SIZE,
             size: PAGE_SIZE,
+            _source: ['name', 'image_url', 'types', 'number'],
             query:
                 mustQueries.length > 0
                     ? { bool: { must: mustQueries } }
@@ -122,7 +137,7 @@ const PokeSearch = () => {
         fetchPokemons();
         setPage(1);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [keywords, selectedTypes, selectedEggGroups, selectedGens]);
+    }, [keywords, selectedTypes, selectedEggGroups, selectedGens, statFilters, moveKeyword]);
 
     useEffect(() => {
         fetchPokemons();
@@ -299,6 +314,16 @@ const PokeSearch = () => {
                                     </div>
                                 </div>
                             ))}
+                        </div>
+
+                        <p>Filtrar por movimiento:</p>
+                        <div className="poksearch__moves">
+                            <input
+                                type="text"
+                                placeholder="Busca un movimiento (ej: Placaje)"
+                                value={moveKeyword}
+                                onChange={e => setMoveKeyword(e.target.value)}
+                            />
                         </div>
 
                         {/*(selectedTypes.length > 0 || selectedGens.length > 0) && (

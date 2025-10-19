@@ -1,0 +1,165 @@
+.pokemon-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.back-button {
+    align-self: flex-start;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.back-button:hover {
+    background-color: #2563eb;
+}
+
+.pokemon-detail__card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    padding: 2rem;
+    max-width: 600px;
+    text-align: center;
+}
+
+.pokemon-image {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.category {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.types {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.type {
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+    color: white;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+/* Colores por tipo, puedes añadir más */
+.type.normal { background-color: #A8A878; color: #333; }
+.type.fuego { background-color: #F08030; color: white; }
+.type.agua { background-color: #6890F0; color: white; }
+.type.planta { background-color: #78C850; color: white; }
+.type.eléctrico { background-color: #F8D030; color: #333; }
+.type.hielo { background-color: #98D8D8; color: #333; }
+.type.lucha { background-color: #C03028; color: white; }
+.type.veneno { background-color: #A040A0; color: white; }
+.type.tierra { background-color: #E0C068; color: #333; }
+.type.volador { background-color: #A890F0; color: white; }
+.type.psíquico { background-color: #F85888; color: white; }
+.type.bicho { background-color: #A8B820; color: #333; }
+.type.roca { background-color: #B8A038; color: #333; }
+.type.fantasma { background-color: #705898; color: white; }
+.type.dragón { background-color: #7038F8; color: white; }
+.type.siniestro { background-color: #705848; color: white; }
+.type.acero { background-color: #B8B8D0; color: #333; }
+.type.hada { background-color: #EE99AC; color: #333; }
+.type.desconocido { background-color: #68A090; color: white; } /* para 'unknown' */
+
+.abilities {
+    margin: 0.5rem 0 1rem 0;
+    text-align: center;
+}
+
+.abilities p {
+    margin: 0.2rem 0;
+    font-size: 0.95rem;
+}
+
+/* Estadísticas */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.stat {
+    background-color: #f3f3f3;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+/* Movimientos */
+.pokemon-moves {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 0.4rem;
+    margin-top: 1rem;
+}
+
+.move {
+    display: inline-block;
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+    color: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Colores por tipo */
+.move.normal { background-color: #A8A878; color: #333; }
+.move.fuego { background-color: #F08030; }
+.move.agua { background-color: #6890F0; }
+.move.planta { background-color: #78C850; }
+.move.eléctrico { background-color: #F8D030; color: #333; }
+.move.hielo { background-color: #98D8D8; color: #333; }
+.move.lucha { background-color: #C03028; }
+.move.veneno { background-color: #A040A0; }
+.move.tierra { background-color: #E0C068; color: #333; }
+.move.volador { background-color: #A890F0; }
+.move.psíquico { background-color: #F85888; }
+.move.bicho { background-color: #A8B820; color: #333; }
+.move.roca { background-color: #B8A038; color: #333; }
+.move.fantasma { background-color: #705898; }
+.move.dragón { background-color: #7038F8; }
+.move.siniestro { background-color: #705848; }
+.move.acero { background-color: #B8B8D0; color: #333; }
+.move.hada { background-color: #EE99AC; color: #333; }
+
+/* Hover efecto */
+.move:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Resistencias y debilidades */
+.resistances {
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.resistances div {
+    margin: 0.2rem 0;
+}
+
+.loading, .error {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #555;
+}
