@@ -1,0 +1,22 @@
+{
+  "mappings": {
+    "properties": {
+      "image_url": {
+        "type": "keyword",
+        "index": false
+      },
+      "name": {
+        "type": "keyword"
+      },
+      "name_english": {
+        "type": "keyword"
+      },
+      "generation": {
+        "type": "integer"
+      },
+      "description": {
+        "type": "keyword"
+      }
+    }
+  }
+}

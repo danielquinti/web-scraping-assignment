@@ -1,0 +1,39 @@
+{
+  "mappings": {
+    "properties": {
+      "number": {
+        "type": "integer"
+      },
+      "name": {
+        "type": "keyword"
+      },
+      "name_english": {
+        "type": "keyword"
+      },
+      "generation": {
+        "type": "integer"
+      },
+      "description": {
+        "type": "keyword"
+      },
+      "movement_type": {
+        "type": "keyword"
+      },
+      "movement_class": {
+        "type": "keyword"
+      },
+      "movement_damage": {
+        "type": "integer",
+        "null_value": null
+      },
+      "movement_precission": {
+        "type": "integer",
+        "null_value": null
+      },
+      "movement_power_points": {
+        "type": "integer",
+        "null_value": null
+      }
+    }
+  }
+}

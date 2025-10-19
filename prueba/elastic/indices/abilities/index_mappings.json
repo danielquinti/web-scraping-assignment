@@ -1,0 +1,30 @@
+{
+  "mappings": {
+    "properties": {
+      "number": {
+        "type": "integer"
+      },
+      "name": {
+        "type": "keyword"
+      },
+      "name_english": {
+        "type": "keyword"
+      },
+      "generation": {
+        "type": "integer"
+      },
+      "description": {
+        "type": "keyword"
+      },
+      "single_holders": {
+        "type": "keyword"
+      },
+      "double_holders": {
+        "type": "keyword"
+      },
+      "hidden_holders": {
+        "type": "keyword"
+      }
+    }
+  }
+}

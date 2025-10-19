@@ -90,7 +90,9 @@ def extract_row_from_tr(cell):
     item = Ability()
     columns = cell.find_all("td")
     if parse_int(columns[0]):
-        item["number"] = parse_int(columns[0])        
+        item["number"] = parse_int(columns[0])
+    else:
+        item["number"] = 0  
 
     item["name"] = extract_name(columns[1])
     item["name_english"] = extract_name_english(columns[1])
