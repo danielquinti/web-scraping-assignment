@@ -76,3 +76,32 @@
     cursor: not-allowed;
     opacity: 0.5;
 }
+
+/* --- TIPOS / CHIPS --- */
+.poksearch__types {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.type-chip {
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid var(--color-gris);
+    background-color: var(--color-gris-claro);
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.type-chip:hover {
+    background-color: var(--color-gris-hover);
+}
+
+.type-chip.selected {
+    background-color: var(--color-oscuro);
+    color: var(--color-blanco);
+    border-color: var(--color-oscuro);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}

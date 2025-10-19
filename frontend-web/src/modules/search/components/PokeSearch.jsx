@@ -4,9 +4,15 @@ import PokeItems from './PokeItems';
 import './PokeSearch.css';
 
 const PAGE_SIZE = 21;
+const ALL_TYPES = [
+    'Normal', 'Planta', 'Agua', 'Fuego', 'Eléctrico', 'Tierra', 'Roca',
+    'Lucha', 'Fantasma', 'Psíquico', 'Siniestro', 'Veneno', 'Bicho', 'Volador',
+    'Hielo', 'Acero', 'Dragón', 'Hada'
+];
 
 const PokeSearch = () => {
     const [keywords, setKeywords] = useState('');
+    const [selectedTypes, setSelectedTypes] = useState([]);
     const [result, setResult] = useState([]);
     const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
@@ -16,40 +22,53 @@ const PokeSearch = () => {
     const fetchPokemons = async () => {
         setLoading(true);
 
+        const mustQueries = [];
+
+       // Búsqueda por nombre
+        if (keywords.trim() !== '') {
+            mustQueries.push({
+                match_phrase_prefix: { name: keywords.trim() }
+            });
+        }
+
+        // Filtro por tipos (modo AND)
+        if (selectedTypes.length > 0) {
+            selectedTypes.forEach(type => {
+                mustQueries.push({
+                    term: { "types.keyword": type }
+                });
+            });
+        }
+
         const query = {
             from: (page - 1) * PAGE_SIZE,
             size: PAGE_SIZE,
-            query: keywords.trim() === ''
-                ? { match_all: {} }
-                : { match_phrase_prefix: { name: keywords.trim() } }
+            query:
+                mustQueries.length > 0
+                    ? { bool: { must: mustQueries } }
+                    : { match_all: {} }
         };
 
+        const response = await backend.elasticSearchService.findPokemons(query);
 
-        try {
-            const response = await backend.elasticSearchService.findPokemons(query);
-
-            if (response.ok && response.payload.hits) {
-                setResult(response.payload.hits.hits);
-                const totalHits = response.payload.hits.total.value || 0;
-                setTotalPages(Math.ceil(totalHits / PAGE_SIZE));
-            } else {
-                setResult([]);
-                setTotalPages(1);
-            }
-        } catch (error) {
-            console.error(error);
+        if (response.ok) {
+            setResult(response.payload.hits.hits);
+            const totalHits = response.payload.hits.total.value || 0;
+            setTotalPages(Math.ceil(totalHits / PAGE_SIZE));
+        } else {
             setResult([]);
             setTotalPages(1);
-        } finally {
-            setLoading(false);
         }
+
+        setLoading(false);
+
     };
 
     useEffect(() => {
         fetchPokemons();
         setPage(1);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [keywords]);
+    }, [keywords, selectedTypes]);
 
     useEffect(() => {
         fetchPokemons();
@@ -64,6 +83,18 @@ const PokeSearch = () => {
         if (newPage >= 1 && newPage <= totalPages) {
             setPage(newPage);
         }
+    };
+
+    const toggleType = type => {
+        setSelectedTypes(prev => {
+            if (prev.includes(type)) {
+                return prev.filter(t => t !== type);
+            } else if (prev.length < 2) {
+                return [...prev, type];
+            } else {
+                return prev; // no permitir más de 2
+            }
+        });
     };
 
     return (
@@ -87,7 +118,22 @@ const PokeSearch = () => {
                 <hr />
                 {filtersOpen && (
                     <div className="poksearch__filters">
-                        <p>Filtros por tipo, generación, habilidades...</p>
+                        <p>Filtrar por tipo (máx. 2):</p>
+                        <div className="poksearch__types">
+                            {ALL_TYPES.map(type => (
+                                <button
+                                    key={type}
+                                    className={`type-chip ${
+                                        selectedTypes.includes(type)
+                                            ? 'selected'
+                                            : ''
+                                    }`}
+                                    onClick={() => toggleType(type)}
+                                >
+                                    {type}
+                                </button>
+                            ))}
+                        </div>
                     </div>
                 )}
             </div>
