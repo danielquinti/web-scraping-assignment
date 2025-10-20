@@ -1,0 +1,275 @@
+.movsearch {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-lg); /* separación con los bordes */
+    box-sizing: border-box;
+}
+
+.movsearch__form input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-gris);
+    outline: none;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.movsearch__form input input:focus  {
+    border-color: var(--color-primario);
+    box-shadow: 0 0 8px rgba(59,130,246,0.3);
+}
+
+/* SECCIÓN DE FILTROS */
+.movsearch__filters-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.movsearch__filters-toggle {
+    background: none;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+    font-size: 1rem;
+    color: var(--color-texto);
+}
+
+.movsearch__filters-section hr {
+    border: none;
+    border-top: 1px solid var(--color-gris);
+    margin: 0;
+}
+
+.movsearch__filters {
+    padding: var(--spacing-sm) 0;
+}
+
+/* Filto de tipo */
+
+.movsearch__types {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.type-chip {
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid var(--color-gris);
+    background-color: var(--color-gris-claro);
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.type-chip:hover {
+    background-color: var(--color-gris-hover);
+}
+
+.type-chip.selected {
+    background-color: var(--color-oscuro);
+    color: var(--color-blanco);
+    border-color: var(--color-oscuro);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Filto de clase */
+
+.movsearch__class {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.class-chip {
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid var(--color-gris);
+    background-color: var(--color-gris-claro);
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.class-chip:hover {
+    background-color: var(--color-gris-hover);
+}
+
+.class-chip.selected {
+    background-color: var(--color-oscuro);
+    color: var(--color-blanco);
+    border-color: var(--color-oscuro);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Filtros de stats */
+
+.movsearch__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem 1rem;
+    margin-top: 1rem;
+}
+
+.stat-filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-gris-claro);
+    border: 1px solid var(--color-gris);
+    border-radius: 8px;
+    padding: 0.4rem 0.6rem;
+    box-sizing: border-box;
+    min-width: 0; /* para evitar overflow */
+}
+
+.stat-filter label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    color: var(--color-texto);
+}
+
+.stat-inputs {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.stat-inputs input {
+    width: 60px;
+    padding: 0.25rem 0.35rem;
+    border: 1px solid var(--color-gris);
+    border-radius: 4px;
+    font-size: 0.85rem;
+    background-color: var(--color-blanco);
+    text-align: center;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-inputs span {
+    font-size: 0.85rem;
+    color: var(--color-gris-oscuro);
+}
+
+.stat-inputs input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 4px rgba(59, 130, 246, 0.3);
+}
+
+/* Responsive: 2 columnas en pantallas medianas, 1 en móviles */
+@media (max-width: 900px) {
+    .movsearch__stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .movsearch__stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Resultados */
+
+.results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.move-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: 0.2s;
+}
+
+.move-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.move-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+}
+
+.type-badge,
+.class-badge {
+    padding: 0.2rem 0.5rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: white;
+}
+
+.class-badge.físico { background: #C03028; }
+.class-badge.especial { background: #6890F0; }
+.class-badge.de-estado { background: #A8A878; }
+
+.type-badge.normal { background: #A8A878; color: #333; }
+.type-badge.fuego { background: #F08030; }
+.type-badge.agua { background: #6890F0; }
+.type-badge.planta { background: #78C850; }
+.type-badge.eléctrico { background: #F8D030; color: #333; }
+.type-badge.hielo { background: #98D8D8; color: #333; }
+.type-badge.lucha { background: #C03028; }
+.type-badge.veneno { background: #A040A0; }
+.type-badge.tierra { background: #E0C068; color: #333; }
+.type-badge.volador { background: #A890F0; }
+.type-badge.psíquico { background: #F85888; }
+.type-badge.bicho { background: #A8B820; color: #333; }
+.type-badge.roca { background: #B8A038; color: #333; }
+.type-badge.fantasma { background: #705898; }
+.type-badge.dragón { background: #7038F8; }
+.type-badge.siniestro { background: #705848; }
+.type-badge.acero { background: #B8B8D0; color: #333; }
+.type-badge.hada { background: #EE99AC; color: #333; }
+
+.description {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.move-stats {
+    display: flex;
+    gap: 0.8rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Paginacion */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.pagination button {
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-gris);
+    background-color: var(--color-blanco);
+    cursor: pointer;
+}
+
+.pagination button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}

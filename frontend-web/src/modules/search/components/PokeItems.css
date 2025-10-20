@@ -17,6 +17,7 @@
 
 .pokeitem-card:hover {
     transform: translateY(-4px);
+    text-decoration: none;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 

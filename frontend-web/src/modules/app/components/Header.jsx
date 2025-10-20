@@ -5,8 +5,8 @@ const Header = () => {
     const links = [
         { name: "Inicio", path: "/" },
         { name: "Pokemon", path: "/pokemon" },
-        { name: "Habilidades", path: "/habilidades" },
         { name: "Movimientos", path: "/movimientos" },
+        { name: "Habilidades", path: "/habilidades" },
         { name: "Objetos", path: "/objetos" },
     ];
 
