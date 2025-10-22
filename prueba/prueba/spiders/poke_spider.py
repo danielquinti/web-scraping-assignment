@@ -1,5 +1,6 @@
 import scrapy
 from prueba.items import PokeItem
+from bs4 import BeautifulSoup
 
 class PokeSpider(scrapy.Spider):
     name = "pokemon"
@@ -43,14 +44,16 @@ class PokeSpider(scrapy.Spider):
         item['df_sp'] = stats_table.xpath('.//tr[6]/td/text()').get().strip()
         item['vel'] = stats_table.xpath('.//tr[7]/td/text()').get().strip()
 
+        soup = BeautifulSoup(response.text, "lxml")
+        table = soup.find('table', class_='movnivel').find_all("tr")
         item['moves'] = [
             {
-                'name': row.css('td:nth-child(2) a::attr(title)').get().strip(),
-                'type': row.css('td:nth-child(3) a::attr(title)').get().strip().replace('Tipo', '').strip(),
-                'class': row.css('td:nth-child(4) a::attr(title)').get().strip().replace('Clase', '').strip()
+                'name': row.find_all("td")[-3].find('a').get('title').strip(),
+                'type': row.find_all("td")[-2].find('a').get('title').strip().replace('Tipo', '').strip(),
+                'class': row.find_all("td")[-1].find('a').get('title').strip().replace('Clase', '').replace('de', '').strip()
             }
-            for row in response.css('table.movnivel tr')[1:]  # skip header
-            if row.css('td:nth-child(2) a::attr(title)').get()
+            for row in table[1:]  # skip header
+            if row.find_all("td")[-3].find('a').get('title').strip()
         ]
         weak_table = response.css('a[title="Súper débil"]').xpath('ancestor::tbody')
         item['super_weak'] = [x.replace("Tipo ", "").capitalize() for x in weak_table.xpath('.//tr[2]/td[3]/span/a/@title').getall()]
