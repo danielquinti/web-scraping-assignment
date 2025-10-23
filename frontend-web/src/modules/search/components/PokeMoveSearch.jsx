@@ -12,6 +12,7 @@ const PAGE_SIZE = 24;
 
 const PokeMoveSearch = () => {
     const [keyword, setKeyword] = useState('');
+    const [descriptionKeyword, setDescriptionKeyword] = useState('');
     const [selectedTypes, setSelectedTypes] = useState([]);
     const [selectedClasses, setSelectedClasses] = useState([]);
     const [damageRange, setDamageRange] = useState({ min: '', max: '' });
@@ -37,6 +38,13 @@ const PokeMoveSearch = () => {
                         { match_phrase_prefix: { name_english: keyword.trim() } }
                     ]
                 }
+            });
+        }
+
+        // Búsqueda por descripcion
+        if (descriptionKeyword.trim() !== '') {
+            mustQueries.push({
+                match_phrase_prefix: { description: descriptionKeyword.trim() }
             });
         }
 
@@ -100,7 +108,7 @@ const PokeMoveSearch = () => {
         fetchMoves();
         setPage(1);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [keyword, selectedTypes, selectedClasses, damageRange, precRange, ppRange]);
+    }, [keyword, descriptionKeyword, selectedTypes, selectedClasses, damageRange, precRange, ppRange]);
 
     useEffect(() => {
         fetchMoves();
@@ -142,6 +150,16 @@ const PokeMoveSearch = () => {
                 <hr />
                 {filtersOpen && (
                     <div className="movsearch__filters">
+                        <p>Filtrar por descripción:</p>
+                        <div className="movsearch__description">
+                            <input
+                                type="text"
+                                placeholder="Busca un movimiento por descripción..."
+                                value={descriptionKeyword}
+                                onChange={e => setDescriptionKeyword(e.target.value)}
+                            />
+                        </div>
+
                         <p>Filtrar por tipo:</p>
                         <div className="movsearch__types">
                             {MOVE_TYPES.map(t => (

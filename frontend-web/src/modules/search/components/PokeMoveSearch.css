@@ -178,6 +178,23 @@
     }
 }
 
+/* Filtrar por descripcion */
+
+.movsearch__description input {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-gris);
+    outline: none;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+}
+
+.movsearch__description input input:focus  {
+    border-color: var(--color-primario);
+    box-shadow: 0 0 8px rgba(59,130,246,0.3);
+}
+
 /* Resultados */
 
 .results {

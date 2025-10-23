@@ -110,8 +110,7 @@ const PokeSearch = () => {
                     should: [
                         { match_phrase_prefix: { abilities: abilityKeyword.trim() } },
                         { match_phrase_prefix: { hidden_abilities: abilityKeyword.trim() } }
-                    ],
-                    minimum_should_match: 1
+                    ]
                 }
             });
         }
