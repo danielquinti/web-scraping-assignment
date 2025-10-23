@@ -10809,4 +10809,16 @@
     "movement_damage": 100,
     "movement_precission": 100,
     "movement_power_points": 5
+},
+{
+    "number": 920,
+    "name": "Luz devastadora",
+    "name_english": "Nihil Light",
+    "generation": 9,
+    "description": "Desata una poderosa luz que ignora todas las leyes de la naturaleza. Puede golpear a Pok\u00e9mon de tipo Hada e ignora los cambios en las caracter\u00edsticas del rival.",
+    "movement_type": "drag\u00f3n",
+    "movement_class": "especial",
+    "movement_damage": 200,
+    "movement_precission": 100,
+    "movement_power_points": 10
 }]

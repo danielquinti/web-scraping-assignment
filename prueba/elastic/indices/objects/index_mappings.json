@@ -6,16 +6,20 @@
         "index": false
       },
       "name": {
-        "type": "keyword"
+		"type": "text",
+		"analyzer": "folding_spanish"
       },
       "name_english": {
-        "type": "keyword"
+		"type": "text",
+		"analyzer": "english" 
+
       },
       "generation": {
         "type": "integer"
       },
       "description": {
-        "type": "keyword"
+		"type": "text",
+		"analyzer": "folding_spanish"
       }
     }
   }

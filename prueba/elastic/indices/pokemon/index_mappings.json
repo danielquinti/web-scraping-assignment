@@ -16,16 +16,19 @@
                 "type": "integer"
             },
             "category": {
-                "type": "keyword"
+                "type": "text",
+                "analyzer": "folding_spanish"
             },
             "types": {
                 "type": "keyword"
             },
             "abilities": {
-                "type": "keyword"
+                "type": "text",
+                "analyzer": "folding_spanish"
             },
             "hidden_abilities": {
-                "type": "keyword"
+                "type": "text",
+                "analyzer": "folding_spanish"
             },
             "egg_groups": {
                 "type": "keyword"
