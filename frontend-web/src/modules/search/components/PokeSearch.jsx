@@ -37,7 +37,8 @@ const PokeSearch = () => {
         df_sp: { min: '', max: '' },
         vel: { min: '', max: '' }
     });
-    const [moveKeyword, setMoveKeyword] = useState('');
+    const [categoryKeyword, setCategoryKeyword] = useState('');
+    const [abilityKeyword, setAbilityKeyword] = useState('');
     const [result, setResult] = useState([]);
     const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
@@ -95,16 +96,22 @@ const PokeSearch = () => {
             }
         });
 
-        // Filtro por movimiento
-        if (moveKeyword.trim() !== '') {
+        // Filtro por categoría
+        if (categoryKeyword.trim() !== '') {
             mustQueries.push({
-                nested: {
-                    path: "moves",
-                    query: {
-                        match_phrase_prefix: {
-                            "moves.name": moveKeyword.trim()
-                        }
-                    }
+                match_phrase_prefix: { category: categoryKeyword.trim() }
+            });
+        }
+
+        // Filtro por habilidad
+        if (abilityKeyword.trim() !== '') {
+            mustQueries.push({
+                bool: {
+                    should: [
+                        { match_phrase_prefix: { abilities: abilityKeyword.trim() } },
+                        { match_phrase_prefix: { hidden_abilities: abilityKeyword.trim() } }
+                    ],
+                    minimum_should_match: 1
                 }
             });
         }
@@ -137,7 +144,7 @@ const PokeSearch = () => {
         fetchPokemons();
         setPage(1);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [keywords, selectedTypes, selectedEggGroups, selectedGens, statFilters, moveKeyword]);
+    }, [keywords, selectedTypes, selectedEggGroups, selectedGens, statFilters, categoryKeyword, abilityKeyword]);
 
     useEffect(() => {
         fetchPokemons();
@@ -187,20 +194,6 @@ const PokeSearch = () => {
             }
         });
     };
-
-    /*const resetFilters = () => {
-        setSelectedTypes([]);
-        setSelectedEggGroups([]);
-        setSelectedGens([]);
-        setStatFilters({
-            ps: { min: '', max: '' },
-            atk: { min: '', max: '' },
-            df: { min: '', max: '' },
-            atk_sp: { min: '', max: '' },
-            df_sp: { min: '', max: '' },
-            vel: { min: '', max: '' }
-        });
-    };*/
 
     return (
         <div className="poksearch">
@@ -316,24 +309,27 @@ const PokeSearch = () => {
                             ))}
                         </div>
 
-                        <p>Filtrar por movimiento:</p>
-                        <div className="poksearch__moves">
-                            <input
-                                type="text"
-                                placeholder="Busca un movimiento (ej: Placaje)"
-                                value={moveKeyword}
-                                onChange={e => setMoveKeyword(e.target.value)}
-                            />
-                        </div>
+                        <div className="poksearch__cat-ability">
+                            <div className="poksearch__input">
+                                <p>Filtrar por categoría:</p>
+                                <input
+                                    type="text"
+                                    placeholder="Ej: Semilla, Llama..."
+                                    value={categoryKeyword}
+                                    onChange={e => setCategoryKeyword(e.target.value)}
+                                />
+                            </div>
 
-                        {/*(selectedTypes.length > 0 || selectedGens.length > 0) && (
-                            <button
-                                className="poksearch__reset"
-                                onClick={resetFilters}
-                            >
-                                Reiniciar filtros
-                            </button>
-                        )*/}
+                            <div className="poksearch__input">
+                                <p>Filtrar por habilidad:</p>
+                                <input
+                                    type="text"
+                                    placeholder="Ej: Impulso, Robustez..."
+                                    value={abilityKeyword}
+                                    onChange={e => setAbilityKeyword(e.target.value)}
+                                />
+                            </div>
+                        </div>
                     </div>
                 )}
             </div>

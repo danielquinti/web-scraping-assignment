@@ -231,43 +231,40 @@
     }
 }
 
-/* Filtro de busqueda de mov */
-.poksearch__moves {
-    margin-top: 1rem;
+/* Filtros para categoría y habilidad */
+.poksearch__cat-ability {
     display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.75rem;
+    align-items: center;
 }
 
-.poksearch__moves input {
-    padding: 0.6rem;
+.poksearch__input {
+    flex: 1;
+    min-width: 240px;
+}
+
+.poksearch__input input {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
     border: 1px solid var(--color-gris);
     border-radius: 6px;
     font-size: 0.95rem;
-    width: 100%;
     background-color: var(--color-blanco);
-    transition: 0.2s;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
 }
 
-.poksearch__moves input:focus {
+.poksearch__input input:focus {
     outline: none;
     border-color: #3b82f6;
     box-shadow: 0 0 4px rgba(59, 130, 246, 0.3);
 }
 
-
-/* Botón de reinicio */
-.poksearch__reset {
-    background-color: #ff4d4f;
-    color: white;
-    border: none;
-    border-radius: var(--border-radius);
-    padding: 0.5rem 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-.poksearch__reset:hover {
-    background-color: #d9363e;
+@media (max-width: 600px) {
+    .poksearch__cat-ability {
+        flex-direction: column;
+        align-items: stretch;
+    }
 }
