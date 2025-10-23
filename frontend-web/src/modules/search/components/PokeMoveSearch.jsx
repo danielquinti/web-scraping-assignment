@@ -6,9 +6,8 @@ const MOVE_TYPES = [
     'normal','fuego','agua','planta','eléctrico','hielo','lucha','veneno','tierra',
     'volador','psíquico','bicho','roca','fantasma','dragón','siniestro','acero','hada'
 ];
-
 const MOVE_CLASSES = ['físico','especial','de estado'];
-const PAGE_SIZE = 24;
+const PAGE_SIZE = 25;
 
 const PokeMoveSearch = () => {
     const [keyword, setKeyword] = useState('');
@@ -18,7 +17,7 @@ const PokeMoveSearch = () => {
     const [damageRange, setDamageRange] = useState({ min: '', max: '' });
     const [precRange, setPrecRange] = useState({ min: '', max: '' });
     const [ppRange, setPpRange] = useState({ min: '', max: '' });
-    const [moves, setMoves] = useState([]);
+    const [results, setResults] = useState([]);
     const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
     const [loading, setLoading] = useState(false);
@@ -93,11 +92,11 @@ const PokeMoveSearch = () => {
         const response = await backend.elasticSearchService.findMoves(query);
 
         if (response.ok) {
-            setMoves(response.payload.hits.hits);
+            setResults(response.payload.hits.hits);
             const totalHits = response.payload.hits.total.value || 0;
             setTotalPages(Math.ceil(totalHits / PAGE_SIZE));
         } else {
-            setMoves([]);
+            setResults([]);
             setTotalPages(1);
         }
 
@@ -140,7 +139,7 @@ const PokeMoveSearch = () => {
                 />
             </div>
 
-            <div  className="movsearch__filters-section">
+            <div className="movsearch__filters-section">
                 <button
                     className="movsearch__filters-toggle"
                     onClick={() => setFiltersOpen(!filtersOpen)}
@@ -287,12 +286,12 @@ const PokeMoveSearch = () => {
             
             {loading ? (
                 <p>Cargando...</p>
-            ) : moves.length === 0 ? (
+            ) : results.length === 0 ? (
                 <p>No se encontraron movimientos.</p>
             ) : (
                 <>
-                    <div  className="results">
-                        {moves.map(item => {
+                    <div className="results">
+                        {results.map(item => {
                             const move = item._source;
                             return (
                                 <div key={item._id || move.number} className={`move-card ${move.movement_type}`}>
@@ -309,9 +308,9 @@ const PokeMoveSearch = () => {
                                     <p className="description">{move.description}</p>
                                 </div>
                             );
-                        })
-                        }
+                        })}
                     </div>
+                    
                     <div className="pagination">
                         <button 
                             onClick={() => setPage(p => Math.max(p - 1, 1))} 

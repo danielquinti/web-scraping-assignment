@@ -150,16 +150,6 @@ const PokeSearch = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [page]);
 
-    const handleSearchChange = e => {
-        setKeywords(e.target.value);
-    };
-
-    const handlePageChange = newPage => {
-        if (newPage >= 1 && newPage <= totalPages) {
-            setPage(newPage);
-        }
-    };
-
     const toggleType = type => {
         setSelectedTypes(prev => {
             if (prev.includes(type)) {
@@ -201,7 +191,7 @@ const PokeSearch = () => {
                     type="text"
                     placeholder="Busca un Pokémon por nombre..."
                     value={keywords}
-                    onChange={handleSearchChange}
+                    onChange={e => setKeywords(e.target.value)}
                 />
             </div>
 
@@ -341,9 +331,9 @@ const PokeSearch = () => {
                 ) : (
                     <>
                         <PokeItems items={result} />
-                        <div className="poksearch__pagination">
+                        <div className="pagination">
                             <button
-                                onClick={() => handlePageChange(page - 1)}
+                                onClick={() => setPage(p => Math.max(p - 1, 1))}
                                 disabled={page === 1}
                             >
                                 Anterior
@@ -352,7 +342,7 @@ const PokeSearch = () => {
                                 Página {page} de {totalPages}
                             </span>
                             <button
-                                onClick={() => handlePageChange(page + 1)}
+                                onClick={() => setPage(p => Math.min(p + 1, totalPages))}
                                 disabled={page === totalPages}
                             >
                                 Siguiente

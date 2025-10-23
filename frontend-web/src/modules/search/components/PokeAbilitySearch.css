@@ -1,0 +1,229 @@
+.abilitysearch {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-lg); /* separación con los bordes */
+    box-sizing: border-box;
+}
+
+.abilitysearch__form input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-gris);
+    outline: none;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.abilitysearch__form input input:focus  {
+    border-color: var(--color-primario);
+    box-shadow: 0 0 8px rgba(59,130,246,0.3);
+}
+
+/* SECCIÓN DE FILTROS */
+.abilitysearch__filters-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.abilitysearch__filters-toggle {
+    background: none;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+    font-size: 1rem;
+    color: var(--color-texto);
+}
+
+.abilitysearch__filters-section hr {
+    border: none;
+    border-top: 1px solid var(--color-gris);
+    margin: 0;
+}
+
+.abilitysearch__filters {
+    padding: var(--spacing-sm) 0;
+}
+
+/* Filtro por generacion */
+
+.abilitysearch__gens {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.gen-chip {
+    background-color: var(--color-gris-claro);
+    border: 1px solid var(--color-gris);
+    border-radius: 8px;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.gen-chip:hover {
+    background-color: var(--color-gris-hover);
+    transform: scale(1.05);
+}
+
+.gen-chip.selected {
+    background-color: #646cff;
+    color: white;
+    border-color: #535bf2;
+}
+
+/* Filtrar por descripcion */
+
+.abilitysearch__description input {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-gris);
+    outline: none;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+}
+
+.abilitysearch__description input input:focus  {
+    border-color: var(--color-primario);
+    box-shadow: 0 0 8px rgba(59,130,246,0.3);
+}
+
+/* Resultadoss */
+.results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.4rem;
+    margin-top: 1.5rem;
+    padding: 0.5rem;
+}
+
+.ability-card {
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    padding: 1.2rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    cursor: default;
+}
+
+.ability-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.ability-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ability-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.ability-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0;
+}
+
+.ability-name-eng {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin: 0;
+}
+
+.ability-gen {
+    font-size: 0.8rem;
+    color: #2563eb;
+    background-color: #eff6ff;
+    padding: 0.15rem 0.4rem;
+    border-radius: 5px;
+    align-self: flex-start;
+    margin-top: 0.3rem;
+}
+
+.ability-desc {
+    font-size: 0.95rem;
+    color: #475569;
+    margin-top: 0.8rem;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+.ability-holders {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.holder-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.holder-label {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.holder-label.single {
+    color: #0ea5e9;
+}
+
+.holder-label.double {
+    color: #10b981;
+}
+
+.holder-label.hidden {
+    color: #a855f7;
+}
+
+.holder-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.holder-name {
+    font-size: 0.85rem;
+    background-color: #f1f5f9;
+    color: #334155;
+    padding: 0.2rem 0.45rem;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+/* Paginacion */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.pagination button {
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-gris);
+    background-color: var(--color-blanco);
+    cursor: pointer;
+}
+
+.pagination button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}

@@ -57,14 +57,14 @@
 }
 
 /* PAGINACIÓN */
-.poksearch__pagination {
+.pagination {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: var(--spacing-md);
 }
 
-.poksearch__pagination button {
+.pagination button {
     padding: 0.5rem 1rem;
     border-radius: var(--border-radius);
     border: 1px solid var(--color-gris);
@@ -72,7 +72,7 @@
     cursor: pointer;
 }
 
-.poksearch__pagination button:disabled {
+.pagination button:disabled {
     cursor: not-allowed;
     opacity: 0.5;
 }

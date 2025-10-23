@@ -8,3 +8,9 @@ export const findPokemonById = async (id) =>
 
 export const findMoves = async (querry) =>
     await appFetch('POST', "/moves/_search", querry);
+
+export const findItems = async (querry) =>
+    await appFetch('POST', "/objects/_search", querry);
+
+export const findAbilities = async (querry) =>
+    await appFetch('POST', "/abilities/_search", querry);
