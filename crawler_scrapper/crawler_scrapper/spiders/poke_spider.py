@@ -11,7 +11,7 @@ class PokeSpider(scrapy.Spider):
     def parse(self, response):
         card = response.css('div.cuadro_pokemon div.ctipo')
         item = PokeItem()
-        item['number'] = card.css('span#numeronacional::text').get()
+        item['number'] = int(card.css('span#numeronacional::text').get().strip())
         item['name'] = card.css('div#nombrepokemon.titulo::text').get()
         item['image_url'] = card.css('div.vnav_datos div.imagen img::attr(src)').get()
         
