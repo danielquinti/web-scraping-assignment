@@ -86,15 +86,12 @@ def _link_spanish_title(self: Tag) -> Optional[str]:
 
 
 
-def _link_titles(self: Tag) -> List[str]:
-    """Return list of non-empty 'title' attributes from all anchors in the element."""
+def _link_texts(self: Tag) -> List[str]:
+    """Return list of text of all <a> tags that are direct children, ignoring nested <a> inside <sup>."""
     if not self:
         return []
-    results: List[str] = []
-    for a in self.find_all("a"):
-        if a and a.has_attr("title") and a["title"].strip():
-            results.append(a["title"].strip())
-    return results
+    return [a.get_text(strip=True) for a in self.find_all("a", recursive=False)]
+
 
 Tag.alternative_text = property(_alternative_text)
 Tag.image_url = property(_image_url)
@@ -102,4 +99,4 @@ Tag.int_ignoring_sup = property(_int_ignoring_sup)
 Tag.italics_text = property(_italics_text)
 Tag.link_spanish_title = property(_link_spanish_title)
 Tag.link_title = property(_link_title)
-Tag.link_titles = property(_link_titles)
+Tag.link_texts = property(_link_texts)

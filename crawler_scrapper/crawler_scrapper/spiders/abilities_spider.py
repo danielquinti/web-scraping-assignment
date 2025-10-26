@@ -29,9 +29,9 @@ def _ability(self: Tag) -> Ability:
     item["name_english"] = columns[1].italics_text
     item["generation"] = int(columns[2].alternative_text)
     item["description"] = columns[3].get_text(" ",strip = True)
-    item["single_holders"] = columns[4].link_titles
-    item["double_holders"] = columns[5].link_titles
-    item["hidden_holders"] = columns[6].link_titles
+    item["single_holders"] = columns[4].link_texts
+    item["double_holders"] = columns[5].link_texts
+    item["hidden_holders"] = columns[6].link_texts
     return item
 
 Tag.ability = property(_ability)

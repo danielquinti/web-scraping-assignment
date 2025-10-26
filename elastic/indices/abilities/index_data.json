@@ -52,7 +52,7 @@
     "single_holders": [
         "Mega-Blaziken",
         "Ninjask",
-        "Autostar"
+        "Autostar Schedar"
     ],
     "double_holders": [
         "Yanma",
@@ -108,7 +108,7 @@
         "Shieldon",
         "Bastiodon",
         "Cosmoem",
-        "Ogerpon"
+        "Ogerpon m\u00e1scara cimiento"
     ],
     "double_holders": [
         "Geodude",
@@ -299,7 +299,7 @@
     "description": "Si lo alcanza un movimiento de tipo el\u00e9ctrico , recupera PS en vez de sufrir da\u00f1o.",
     "single_holders": [
         "Jolteon",
-        "Thundurus",
+        "Thundurus forma t\u00f3tem",
         "Zeraora"
     ],
     "double_holders": [
@@ -326,7 +326,7 @@
     "single_holders": [
         "Vaporeon",
         "Volcanion",
-        "Ogerpon"
+        "Ogerpon m\u00e1scara fuente"
     ],
     "double_holders": [
         "Poliwag",
@@ -592,7 +592,7 @@
         "Avalugg",
         "Mudbray",
         "Mudsdale",
-        "Indeedee",
+        "Indeedee \u2640",
         "Tadbulb",
         "Tinkatink",
         "Tinkatuff",
@@ -637,8 +637,8 @@
         "Salamence",
         "Staravia",
         "Staraptor",
-        "Landorus",
-        "Autostar"
+        "Landorus forma t\u00f3tem",
+        "Autostar Segin"
     ],
     "double_holders": [
         "Ekans",
@@ -758,7 +758,7 @@
         "Mesprit",
         "Azelf",
         "Cresselia",
-        "Giratina",
+        "Giratina forma origen",
         "Tynamo",
         "Eelektross",
         "Eelektrik",
@@ -824,8 +824,8 @@
         "Musharna",
         "Elgyem",
         "Beheeyem",
-        "Indeedee",
-        "Indeedee"
+        "Indeedee \u2642",
+        "Indeedee \u2640"
     ],
     "hidden_holders": []
 },
@@ -933,7 +933,7 @@
     "description": "Aumenta la probabilidad de que los movimientos causen efectos secundarios .",
     "single_holders": [
         "Jirachi",
-        "Shaymin",
+        "Shaymin forma cielo",
         "Meloetta"
     ],
     "double_holders": [
@@ -1181,7 +1181,7 @@
         "Pawniard",
         "Bisharp",
         "Oranguru",
-        "Indeedee",
+        "Indeedee \u2642",
         "Annihilape"
     ],
     "hidden_holders": [
@@ -1356,10 +1356,10 @@
         "Weavile",
         "Dialga",
         "Palkia",
-        "Giratina",
+        "Giratina forma modificada",
         "Kyurem",
         "Eternatus",
-        "Eternatus"
+        "Eternatus Dinamax infinito"
     ],
     "double_holders": [
         "Aerodactyl",
@@ -1414,8 +1414,8 @@
         "Pignite",
         "Appletun",
         "Lechonk",
-        "Oinkologne",
-        "Oinkologne"
+        "Oinkologne \u2642",
+        "Oinkologne \u2640"
     ]
 },
 {
@@ -1488,7 +1488,7 @@
     "generation": 3,
     "description": "Puede escapar de cualquier Pok\u00e9mon salvaje .",
     "single_holders": [
-        "Gimmighoul"
+        "Gimmighoul forma andante"
     ],
     "double_holders": [
         "Rattata",
@@ -1563,14 +1563,14 @@
         "Braviary",
         "Braviary de Hisui",
         "Espurr",
-        "Meowstic",
-        "Meowstic",
+        "Meowstic macho",
+        "Meowstic hembra",
         "Pikipek",
         "Trumbeak",
         "Toucannon",
         "Rockruff",
-        "Lycanroc",
-        "Lycanroc",
+        "Lycanroc diurno",
+        "Lycanroc nocturno",
         "Rookidee",
         "Corvisquire",
         "Bombirdier"
@@ -1702,7 +1702,7 @@
     "description": "Puede causar enamoramiento al Pok\u00e9mon que lo ataque con un movimiento de contacto .",
     "single_holders": [
         "Sylveon",
-        "Enamorus"
+        "Enamorus forma avatar"
     ],
     "double_holders": [
         "Cleffa",
@@ -1735,7 +1735,7 @@
         "Klink",
         "Klang",
         "Klinklang",
-        "Toxtricity"
+        "Toxtricity aguda"
     ],
     "hidden_holders": [
         "Mareep",
@@ -1757,7 +1757,7 @@
         "Klink",
         "Klang",
         "Klinklang",
-        "Toxtricity"
+        "Toxtricity grave"
     ],
     "hidden_holders": [
         "Electrike",
@@ -1864,8 +1864,8 @@
         "Shinx",
         "Luxio",
         "Luxray",
-        "Squawkabilly",
-        "Squawkabilly"
+        "Squawkabilly plumaje verde",
+        "Squawkabilly plumaje azul"
     ]
 },
 {
@@ -2095,7 +2095,7 @@
         "Lairon",
         "Aggron",
         "Relicanth",
-        "Basculin"
+        "Basculin raya azul"
     ],
     "hidden_holders": [
         "Growlithe de Hisui",
@@ -2153,7 +2153,7 @@
         "Delibird",
         "Lillipup",
         "Rockruff",
-        "Lycanroc"
+        "Lycanroc nocturno"
     ],
     "hidden_holders": [
         "Electabuzz",
@@ -2341,7 +2341,7 @@
         "Scyther",
         "Hitmontop",
         "Rockruff",
-        "Lycanroc"
+        "Lycanroc diurno"
     ]
 },
 {
@@ -2401,8 +2401,8 @@
         "Appletun",
         "Dipplin",
         "Lechonk",
-        "Oinkologne",
-        "Oinkologne"
+        "Oinkologne \u2642",
+        "Oinkologne \u2640"
     ],
     "hidden_holders": [
         "Bellsprout",
@@ -2596,9 +2596,9 @@
     "double_holders": [
         "Eevee",
         "Porygon-Z",
-        "Basculin",
-        "Basculin",
-        "Basculin",
+        "Basculin raya roja",
+        "Basculin raya azul",
+        "Basculin raya blanca",
         "Basculegion"
     ],
     "hidden_holders": [
@@ -2797,7 +2797,7 @@
         "Karrablast",
         "Golett",
         "Golurk",
-        "Lycanroc"
+        "Lycanroc nocturno"
     ]
 },
 {
@@ -2841,8 +2841,8 @@
         "Breloom",
         "Kricketune",
         "Roserade",
-        "Toxtricity",
-        "Toxtricity",
+        "Toxtricity aguda",
+        "Toxtricity grave",
         "Clobbopus",
         "Grapploct",
         "Maushold",
@@ -2918,7 +2918,7 @@
         "Mega-Ampharos",
         "Cranidos",
         "Rampardos",
-        "Ogerpon"
+        "Ogerpon m\u00e1scara horno"
     ],
     "double_holders": [
         "Pinsir",
@@ -2936,9 +2936,9 @@
         "Excadrill",
         "Throh",
         "Sawk",
-        "Basculin",
-        "Basculin",
-        "Basculin",
+        "Basculin raya roja",
+        "Basculin raya azul",
+        "Basculin raya blanca",
         "Basculegion",
         "Druddigon",
         "Hawlucha",
@@ -3300,7 +3300,7 @@
     "single_holders": [],
     "double_holders": [
         "Hitmonlee",
-        "Basculin",
+        "Basculin raya roja",
         "Bouffalant",
         "Obstagoon"
     ],
@@ -3418,10 +3418,10 @@
         "Bagon",
         "Cranidos",
         "Rampardos",
-        "Landorus",
+        "Landorus forma avatar",
         "Toucannon",
-        "Squawkabilly",
-        "Squawkabilly",
+        "Squawkabilly plumaje amarillo",
+        "Squawkabilly plumaje blanco",
         "Cetoddle",
         "Cetitan"
     ]
@@ -3445,7 +3445,7 @@
         "Serperior",
         "Fomantis",
         "Lurantis",
-        "Enamorus"
+        "Enamorus forma avatar"
     ]
 },
 {
@@ -3495,7 +3495,7 @@
     "description": "Aumenta mucho su ataque cuando el rival le reduce cualquiera de sus caracter\u00edsticas .",
     "single_holders": [
         "Zapdos de Galar",
-        "Ogerpon"
+        "Ogerpon m\u00e1scara turquesa"
     ],
     "double_holders": [
         "Pawniard",
@@ -3509,8 +3509,8 @@
         "Farfetch\u2019d",
         "Purugly",
         "Braviary",
-        "Tornadus",
-        "Thundurus",
+        "Tornadus forma avatar",
+        "Thundurus forma avatar",
         "Passimian",
         "Obstagoon",
         "Falinks"
@@ -3753,7 +3753,7 @@
         "Medicham",
         "Dialga",
         "Palkia",
-        "Giratina",
+        "Giratina forma modificada",
         "Munna",
         "Musharna",
         "Noibat",
@@ -3794,7 +3794,7 @@
     "generation": 5,
     "description": "No recibe da\u00f1o de las tormentas de arena ni sufre los efectos causados por polvos o esporas .",
     "single_holders": [
-        "Enamorus",
+        "Enamorus forma t\u00f3tem",
         "Varoom",
         "Revavroom"
     ],
@@ -3853,7 +3853,7 @@
     "generation": 5,
     "description": "Recupera unos pocos PS cuando se retira del combate.",
     "single_holders": [
-        "Tornadus"
+        "Tornadus forma t\u00f3tem"
     ],
     "double_holders": [
         "Audino",
@@ -3928,7 +3928,7 @@
         "Stoutland",
         "Drilbur",
         "Excadrill",
-        "Lycanroc"
+        "Lycanroc diurno"
     ],
     "hidden_holders": [
         "Sandshrew",
@@ -4015,8 +4015,8 @@
         "Cottonee",
         "Whimsicott",
         "Espurr",
-        "Meowstic",
-        "Meowstic",
+        "Meowstic \u2642",
+        "Meowstic \u2640",
         "Noibat",
         "Noivern",
         "Dreepy",
@@ -4111,10 +4111,10 @@
     "generation": 5,
     "description": "Si lo alcanza un ataque de tipo siniestro , bicho o fantasma , o si sufre los efectos de intimidaci\u00f3n , el miedo hace que aumente su velocidad .",
     "single_holders": [
-        "Gimmighoul"
+        "Gimmighoul forma cofre"
     ],
     "double_holders": [
-        "Basculin",
+        "Basculin raya blanca",
         "Toxel",
         "Wiglett",
         "Wugtrio"
@@ -4200,8 +4200,8 @@
     "description": "Sus movimientos de estado tienen prioridad alta.",
     "single_holders": [
         "Mega-Banette",
-        "Tornadus",
-        "Thundurus",
+        "Tornadus forma avatar",
+        "Thundurus forma avatar",
         "Klefki"
     ],
     "double_holders": [
@@ -4216,7 +4216,7 @@
         "Riolu",
         "Purrloin",
         "Liepard",
-        "Meowstic",
+        "Meowstic \u2642",
         "Impidimp",
         "Morgrem",
         "Grimmsnarl",
@@ -4233,7 +4233,7 @@
     "single_holders": [
         "Mega-Steelix",
         "Mega-Garchomp",
-        "Landorus"
+        "Landorus forma avatar"
     ],
     "double_holders": [
         "Drilbur",
@@ -4333,7 +4333,7 @@
     ],
     "double_holders": [
         "Lechonk",
-        "Oinkologne"
+        "Oinkologne \u2640"
     ],
     "hidden_holders": [
         "Spritzee",
@@ -4470,7 +4470,7 @@
         "Piplup",
         "Prinplup",
         "Empoleon",
-        "Meowstic",
+        "Meowstic \u2640",
         "Boltund",
         "Wattrel",
         "Kilowattrel"
@@ -4612,7 +4612,7 @@
         "Mega-Charizard X",
         "Mega-Aerodactyl",
         "Mega-Metagross",
-        "Lycanroc"
+        "Lycanroc crepuscular"
     ],
     "double_holders": [
         "Meowth de Galar",
@@ -4712,8 +4712,8 @@
     "generation": 6,
     "description": "Invierte los efectos de las habilidades de auras, por lo que reduce la potencia de ciertos movimientos en vez de aumentarla.",
     "single_holders": [
-        "Zygarde",
-        "Zygarde"
+        "Zygarde al 10%",
+        "Zygarde al 50%"
     ],
     "double_holders": [],
     "hidden_holders": []
@@ -4761,7 +4761,7 @@
     "generation": 7,
     "description": "Aumenta su defensa al recibir un ataque.",
     "single_holders": [
-        "Autostar"
+        "Autostar Caph"
     ],
     "double_holders": [
         "Mudbray",
@@ -5019,9 +5019,9 @@
     "generation": 7,
     "description": "Cuando sus PS se ven reducidos a la mitad, las c\u00e9lulas se reagrupan y adopta su forma completa.",
     "single_holders": [
-        "Zygarde",
-        "Zygarde",
-        "Zygarde"
+        "Zygarde al 10%",
+        "Zygarde al 50%",
+        "Zygarde forma completa"
     ],
     "double_holders": [],
     "hidden_holders": []
@@ -5241,8 +5241,8 @@
     ],
     "double_holders": [],
     "hidden_holders": [
-        "Indeedee",
-        "Indeedee"
+        "Indeedee \u2642",
+        "Indeedee \u2640"
     ]
 },
 {
@@ -5253,7 +5253,7 @@
     "description": "Crea un campo de niebla al entrar en combate.",
     "single_holders": [
         "Tapu Fini",
-        "Autostar"
+        "Autostar Ruchbah"
     ],
     "double_holders": [],
     "hidden_holders": [
@@ -5308,8 +5308,8 @@
     "description": "Mitiga el da\u00f1o que le infligen los movimientos supereficaces.",
     "single_holders": [
         "Necrozma",
-        "Necrozma",
-        "Necrozma"
+        "Necrozma melena crespuscular",
+        "Necrozma alas del alba"
     ],
     "double_holders": [],
     "hidden_holders": []
@@ -5461,8 +5461,8 @@
     "description": "Potencia los movimientos que usan sonido y reduce a la mitad el da\u00f1o que le infligen dichos movimientos.",
     "single_holders": [],
     "double_holders": [
-        "Toxtricity",
-        "Toxtricity"
+        "Toxtricity aguda",
+        "Toxtricity grave"
     ],
     "hidden_holders": []
 },
@@ -5759,7 +5759,7 @@
     "description": "Contagia la habilidad olor persistente al Pok\u00e9mon que lo ataque con un movimiento de contacto .",
     "single_holders": [],
     "double_holders": [
-        "Oinkologne"
+        "Oinkologne \u2642"
     ],
     "hidden_holders": []
 },
@@ -6118,7 +6118,7 @@
     "single_holders": [
         "Glimmet",
         "Glimmora",
-        "Autostar"
+        "Autostar Tsih"
     ],
     "double_holders": [],
     "hidden_holders": []
@@ -6180,7 +6180,7 @@
     "generation": 9,
     "description": "Alcanza a Pok\u00e9mon de tipo fantasma con movimientos de tipo normal o lucha . Su precisi\u00f3n no se puede reducir e ignora los cambios en la evasi\u00f3n del objetivo.",
     "single_holders": [
-        "Ursaluna"
+        "Ursaluna luna carmes\u00ed"
     ],
     "double_holders": [],
     "hidden_holders": []
@@ -6192,7 +6192,7 @@
     "generation": 9,
     "description": "Al evocar viejos recuerdos, el Pok\u00e9mon hace brillar la m\u00e1scara turquesa y aumenta su velocidad .",
     "single_holders": [
-        "Ogerpon"
+        "Ogerpon m\u00e1scara turquesa Teracristal"
     ],
     "double_holders": [],
     "hidden_holders": []
@@ -6204,7 +6204,7 @@
     "generation": 9,
     "description": "Al evocar viejos recuerdos, el Pok\u00e9mon hace brillar la m\u00e1scara horno y aumenta su ataque .",
     "single_holders": [
-        "Ogerpon"
+        "Ogerpon m\u00e1scara horno Teracristal"
     ],
     "double_holders": [],
     "hidden_holders": []
@@ -6216,7 +6216,7 @@
     "generation": 9,
     "description": "Al evocar viejos recuerdos, el Pok\u00e9mon hace brillar la m\u00e1scara fuente y aumenta su defensa especial .",
     "single_holders": [
-        "Ogerpon"
+        "Ogerpon m\u00e1scara fuente Teracristal"
     ],
     "double_holders": [],
     "hidden_holders": []
@@ -6228,7 +6228,7 @@
     "generation": 9,
     "description": "Al evocar viejos recuerdos, el Pok\u00e9mon hace brillar la m\u00e1scara cimiento y aumenta su defensa .",
     "single_holders": [
-        "Ogerpon"
+        "Ogerpon m\u00e1scara cimiento Teracristal"
     ],
     "double_holders": [],
     "hidden_holders": []
@@ -6267,7 +6267,7 @@
     "generation": 9,
     "description": "Al entrar en combate, adopta la Forma Teracristal tras absorber la energ\u00eda de su alrededor.",
     "single_holders": [
-        "Terapagos"
+        "Terapagos forma normal"
     ],
     "double_holders": [],
     "hidden_holders": []
@@ -6279,7 +6279,7 @@
     "generation": 9,
     "description": "Su caparaz\u00f3n encierra energ\u00eda de todos los tipos. Gracias a ello, si sus PS est\u00e1n al m\u00e1ximo, el movimiento que lo alcance no ser\u00e1 muy eficaz.",
     "single_holders": [
-        "Terapagos"
+        "Terapagos forma Teracristal"
     ],
     "double_holders": [],
     "hidden_holders": []
@@ -6291,7 +6291,7 @@
     "generation": 9,
     "description": "Cuando Terapagos adopta la Forma Astral, anula todos los efectos del tiempo atmosf\u00e9rico y de los campos que haya en el terreno gracias a su poder oculto.",
     "single_holders": [
-        "Terapagos"
+        "Terapagos forma astral"
     ],
     "double_holders": [],
     "hidden_holders": []
