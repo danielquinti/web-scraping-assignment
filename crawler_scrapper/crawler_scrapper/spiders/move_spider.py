@@ -1,7 +1,7 @@
 import scrapy
-from prueba.items import PokeCompleteMove
+from crawler_scrapper.items import PokeCompleteMove
 from bs4 import BeautifulSoup
-import prueba.spiders.bs4_extensions
+import crawler_scrapper.spiders.bs4_extensions
 from bs4.element import Tag
 from typing import Optional
 

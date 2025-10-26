@@ -16,12 +16,12 @@
         "Monstruo",
         "Planta"
     ],
-    "ps": "45",
-    "atk": "49",
-    "df": "49",
-    "atk_sp": "65",
-    "df_sp": "65",
-    "vel": "45",
+    "ps": 45,
+    "atk": 49,
+    "df": 49,
+    "atk_sp": 65,
+    "df_sp": 65,
+    "vel": 45,
     "moves": [
         {
             "name": "Placaje",
@@ -146,12 +146,12 @@
         "Monstruo",
         "Planta"
     ],
-    "ps": "60",
-    "atk": "62",
-    "df": "63",
-    "atk_sp": "80",
-    "df_sp": "80",
-    "vel": "60",
+    "ps": 60,
+    "atk": 62,
+    "df": 63,
+    "atk_sp": 80,
+    "df_sp": 80,
+    "vel": 60,
     "moves": [
         {
             "name": "Placaje",
@@ -276,12 +276,12 @@
         "Monstruo",
         "Planta"
     ],
-    "ps": "80",
-    "atk": "82",
-    "df": "83",
-    "atk_sp": "100",
-    "df_sp": "100",
-    "vel": "80",
+    "ps": 80,
+    "atk": 82,
+    "df": 83,
+    "atk_sp": 100,
+    "df_sp": 100,
+    "vel": 80,
     "moves": [
         {
             "name": "Latigazo",

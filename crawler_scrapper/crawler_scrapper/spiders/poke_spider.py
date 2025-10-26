@@ -1,7 +1,7 @@
 import scrapy
-from prueba.items import PokeItem
+from crawler_scrapper.items import PokeItem
 from bs4 import BeautifulSoup
-import prueba.spiders.bs4_extensions
+import crawler_scrapper.spiders.bs4_extensions
 
 class PokeSpider(scrapy.Spider):
     name = "pokemon"
@@ -38,12 +38,12 @@ class PokeSpider(scrapy.Spider):
         item['egg_groups'] = [x.strip() for x in card.css('tr[title="Grupos de Pokémon con los que puede reproducirse"] td::text').getall()]
         
         stats_table = response.css('a[title="Lista de Pokémon con sus características base"]').xpath('ancestor::tbody')
-        item['ps'] = stats_table.xpath('.//tr[2]/td/text()').get().strip()
-        item['atk'] = stats_table.xpath('.//tr[3]/td/text()').get().strip()
-        item['df'] = stats_table.xpath('.//tr[4]/td/text()').get().strip()
-        item['atk_sp'] = stats_table.xpath('.//tr[5]/td/text()').get().strip()
-        item['df_sp'] = stats_table.xpath('.//tr[6]/td/text()').get().strip()
-        item['vel'] = stats_table.xpath('.//tr[7]/td/text()').get().strip()
+        item['ps'] = int(stats_table.xpath('.//tr[2]/td/text()').get().strip())
+        item['atk'] = int(stats_table.xpath('.//tr[3]/td/text()').get().strip())
+        item['df'] = int(stats_table.xpath('.//tr[4]/td/text()').get().strip())
+        item['atk_sp'] = int(stats_table.xpath('.//tr[5]/td/text()').get().strip())
+        item['df_sp'] = int(stats_table.xpath('.//tr[6]/td/text()').get().strip())
+        item['vel'] = int(stats_table.xpath('.//tr[7]/td/text()').get().strip())
 
         soup = BeautifulSoup(response.text, "lxml")
         table = soup.find('table', class_='movnivel').find_all("tr")

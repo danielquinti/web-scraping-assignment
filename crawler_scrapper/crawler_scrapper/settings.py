@@ -1,4 +1,4 @@
-# Scrapy settings for prueba project
+# Scrapy settings for crawler_scrapper project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,16 +7,16 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = "prueba"
+BOT_NAME = "crawler_scrapper"
 
-SPIDER_MODULES = ["prueba.spiders"]
-NEWSPIDER_MODULE = "prueba.spiders"
+SPIDER_MODULES = ["crawler_scrapper.spiders"]
+NEWSPIDER_MODULE = "crawler_scrapper.spiders"
 
 ADDONS = {}
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = "prueba (+http://www.yourdomain.com)"
+#USER_AGENT = "crawler_scrapper (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
@@ -41,13 +41,13 @@ COOKIES_ENABLED = False
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    "prueba.middlewares.PruebaSpiderMiddleware": 543,
+#    "crawler_scrapper.middlewares.CrawlerScrapperSpiderMiddleware": 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    "prueba.middlewares.PruebaDownloaderMiddleware": 543,
+#    "crawler_scrapper.middlewares.CrawlerScrapperDownloaderMiddleware": 543,
 #}
 
 # Enable or disable extensions
@@ -60,7 +60,7 @@ COOKIES_ENABLED = False
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 
 ITEM_PIPELINES = {
-    'prueba.pipelines.GeneralPipeline': 1,
+    'crawler_scrapper.pipelines.GeneralPipeline': 1,
 }
 
 

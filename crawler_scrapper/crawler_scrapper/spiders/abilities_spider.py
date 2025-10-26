@@ -1,8 +1,8 @@
 import scrapy
-from prueba.items import Ability
+from crawler_scrapper.items import Ability
 from bs4 import BeautifulSoup
 from bs4.element import Tag
-import prueba.spiders.bs4_extensions
+import crawler_scrapper.spiders.bs4_extensions
 
 class AbilitySpider(scrapy.Spider):
     name = "abilities"

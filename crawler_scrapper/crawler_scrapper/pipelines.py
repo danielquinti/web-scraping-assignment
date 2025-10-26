@@ -9,7 +9,7 @@ import json
 
 class GeneralPipeline:
     def open_spider(self, spider):
-        self.file = open(f'elastic/indices/{spider.name}/index_data.json', 'w')
+        self.file = open(f'../elastic/indices/{spider.name}/index_data.json', 'w')
         self.file.write('[')
         self.first_item = True
 
