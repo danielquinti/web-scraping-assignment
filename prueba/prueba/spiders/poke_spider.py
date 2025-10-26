@@ -1,6 +1,7 @@
 import scrapy
 from prueba.items import PokeItem
 from bs4 import BeautifulSoup
+import prueba.spiders.bs4_extensions
 
 class PokeSpider(scrapy.Spider):
     name = "pokemon"
@@ -48,12 +49,12 @@ class PokeSpider(scrapy.Spider):
         table = soup.find('table', class_='movnivel').find_all("tr")
         item['moves'] = [
             {
-                'name': row.find_all("td")[-3].find('a').get('title').strip(),
-                'type': row.find_all("td")[-2].find('a').get('title').strip().replace('Tipo', '').strip(),
-                'class': row.find_all("td")[-1].find('a').get('title').strip().replace('Clase', '').replace('de', '').strip()
+                'name': row.find_all("td")[-3].link_title,
+                'type': row.find_all("td")[-2].link_title.replace('Tipo', '').strip(),
+                'class': row.find_all("td")[-1].link_title.replace('Clase', '').replace('de', '').strip()
             }
             for row in table[1:]  # skip header
-            if row.find_all("td")[-3].find('a').get('title').strip()
+            if row.find_all("td")[-3].link_title
         ]
         weak_table = response.css('a[title="Súper débil"]').xpath('ancestor::tbody')
         item['super_weak'] = [x.replace("Tipo ", "").capitalize() for x in weak_table.xpath('.//tr[2]/td[3]/span/a/@title').getall()]

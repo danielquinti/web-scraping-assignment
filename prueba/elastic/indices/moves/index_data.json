@@ -180,7 +180,7 @@
 },
 {
     "number": 16,
-    "name": "R\u00e1faga de aire / Tornado",
+    "name": "Tornado",
     "name_english": "Gust",
     "generation": 1,
     "description": "Crea un tornado con las alas y lo lanza contra el objetivo.",
@@ -204,7 +204,7 @@
 },
 {
     "number": 18,
-    "name": "Torbellino / Remolino",
+    "name": "Remolino",
     "name_english": "Whirlwind",
     "generation": 1,
     "description": "Se lleva al objetivo, que es cambiado por otro Pok\u00e9mon. Si es un Pok\u00e9mon salvaje, acaba el combate.",
@@ -456,7 +456,7 @@
 },
 {
     "number": 39,
-    "name": "L\u00e1tigo",
+    "name": "Agitacola",
     "name_english": "Tail Whip",
     "generation": 1,
     "description": "Agita la cola para despistar al objetivo y reducir su Defensa.",
@@ -2100,7 +2100,7 @@
 },
 {
     "number": 176,
-    "name": "Conversi\u00f3n2",
+    "name": "Conversi\u00f3n 2",
     "name_english": "Conversion 2",
     "generation": 2,
     "description": "El usuario cambia de tipo para hacerse resistente al tipo del \u00faltimo movimiento usado por el objetivo.",
@@ -2808,7 +2808,7 @@
 },
 {
     "number": 235,
-    "name": "S\u00edntesis",
+    "name": "Fotos\u00edntesis",
     "name_english": "Synthesis",
     "generation": 2,
     "description": "Restaura PS del usuario. La cantidad var\u00eda seg\u00fan el tiempo que haga.",
@@ -2988,7 +2988,7 @@
 },
 {
     "number": 250,
-    "name": "Remolino / Torbellino",
+    "name": "Torbellino",
     "name_english": "Whirlpool",
     "generation": 2,
     "description": "Una tromba de agua atrapa y da\u00f1a al objetivo durante cuatro o cinco turnos.",
@@ -9987,7 +9987,7 @@
     "name": "Teraexplosi\u00f3n",
     "name_english": "Tera Blast",
     "generation": 9,
-    "description": "Si el usuario se ha teracristalizado, ataca con la energ\u00eda de su teratipo. Compara sus valores de Ataque y Ataque Especial para infligir da\u00f1o con el m\u00e1s alto de los dos. 186 Inflige da\u00f1o con el valor m\u00e1s alto entre Ataque y Ataque Especial, pero reduce ambas caracter\u00edsticas del usuario. Si el objetivo se ha teracristalizado, es supereficaz.",
+    "description": "Si el usuario se ha teracristalizado, ataca con la energ\u00eda de su teratipo. Compara sus valores de Ataque y Ataque Especial para infligir da\u00f1o con el m\u00e1s alto de los dos. 189 Inflige da\u00f1o con el valor m\u00e1s alto entre Ataque y Ataque Especial, pero reduce ambas caracter\u00edsticas del usuario. Si el objetivo se ha teracristalizado, es supereficaz.",
     "movement_type": "normal",
     "movement_class": "especial",
     "movement_damage": 80,
