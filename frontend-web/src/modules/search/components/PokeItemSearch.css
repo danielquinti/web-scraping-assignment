@@ -96,7 +96,7 @@
 }
 
 /* Resultadoss */
-.results {
+.results-i {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 1.2rem;

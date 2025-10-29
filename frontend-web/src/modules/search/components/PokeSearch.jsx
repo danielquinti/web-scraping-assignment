@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router';
+
 import backend from '../../../backend';
-import PokeItems from './PokeItems';
 import './PokeSearch.css';
 
 const PAGE_SIZE = 21;
@@ -323,34 +324,49 @@ const PokeSearch = () => {
                 )}
             </div>
 
-            <div className="poksearch__results">
-                {loading ? (
-                    <p>Cargando Pokémon...</p>
-                ) : result.length === 0 ? (
-                    <p>No se encontraron Pokémon que coincidan.</p>
-                ) : (
-                    <>
-                        <PokeItems items={result} />
-                        <div className="pagination">
-                            <button
-                                onClick={() => setPage(p => Math.max(p - 1, 1))}
-                                disabled={page === 1}
-                            >
-                                Anterior
-                            </button>
-                            <span>
-                                Página {page} de {totalPages}
-                            </span>
-                            <button
-                                onClick={() => setPage(p => Math.min(p + 1, totalPages))}
-                                disabled={page === totalPages}
-                            >
-                                Siguiente
-                            </button>
-                        </div>
-                    </>
-                )}
-            </div>
+            {loading ? (
+                <p>Cargando Pokémon...</p>
+            ) : result.length === 0 ? (
+                <p>No se encontraron Pokémon que coincidan.</p>
+            ) : (
+                <>
+                    <div className="results-p">
+                        {result.map(item => {
+                            const pokemon = item._source;
+                            return (
+                                <Link
+                                    key={item._id || pokemon.number}
+                                    to={`/pokemon/${item._id}`}
+                                    className="pokeitem-card"
+                                >
+                                    <img src={pokemon.image_url} alt={pokemon.name} />
+                                    <h3>{pokemon.name}</h3>
+                                    <p>{pokemon.types.join(' / ')}</p>
+                                    <p className="poke-number">#{pokemon.number}</p>
+                                </Link>
+                            );
+                        })}
+                    </div>
+
+                    <div className="pagination">
+                        <button
+                            onClick={() => setPage(p => Math.max(p - 1, 1))}
+                            disabled={page === 1}
+                        >
+                            Anterior
+                        </button>
+                        <span>
+                            Página {page} de {totalPages}
+                        </span>
+                        <button
+                            onClick={() => setPage(p => Math.min(p + 1, totalPages))}
+                            disabled={page === totalPages}
+                        >
+                            Siguiente
+                        </button>
+                    </div>
+                </>
+            )}
         </div>
     );
 };

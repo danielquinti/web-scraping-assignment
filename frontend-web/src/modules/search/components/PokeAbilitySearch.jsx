@@ -148,7 +148,7 @@ const PokeAbilitySearch = () => {
                 <p>No se encontraron objetos.</p>
             ) : (
                 <>
-                    <div className="results">
+                    <div className="results-a">
                         {result.map((ability) => {
                             const ab = ability._source;
                             return (

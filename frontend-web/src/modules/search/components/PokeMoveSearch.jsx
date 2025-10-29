@@ -7,7 +7,7 @@ const MOVE_TYPES = [
     'volador','psíquico','bicho','roca','fantasma','dragón','siniestro','acero','hada'
 ];
 const MOVE_CLASSES = ['físico','especial','de estado'];
-const PAGE_SIZE = 25;
+const PAGE_SIZE = 20;
 
 const PokeMoveSearch = () => {
     const [keyword, setKeyword] = useState('');
@@ -290,7 +290,7 @@ const PokeMoveSearch = () => {
                 <p>No se encontraron movimientos.</p>
             ) : (
                 <>
-                    <div className="results">
+                    <div className="results-m">
                         {results.map(item => {
                             const move = item._source;
                             return (

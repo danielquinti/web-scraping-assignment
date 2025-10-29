@@ -148,7 +148,7 @@ const PokeItemSearch = () => {
                 <p>No se encontraron objetos.</p>
             ) : (
                 <>
-                    <div className="results">
+                    <div className="results-i">
                         {result.map((item, index) => {
                             const objet = item._source;                        
                             return (
