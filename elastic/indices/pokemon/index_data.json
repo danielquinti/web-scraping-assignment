@@ -2343,7 +2343,7 @@
     "name": "Fearow",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/41/latest/20200307023409/Fearow.png/200px-Fearow.png",
     "gen": 1,
-    "category": "Pico",
+    "category": "",
     "types": [
         "Normal",
         "Volador"
@@ -3232,7 +3232,7 @@
     "name": "Nidoran\u2640",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/c8/latest/20230613021248/Nidoran%E2%99%80.png/200px-Nidoran%E2%99%80.png",
     "gen": 1,
-    "category": "Pin veneno",
+    "category": "",
     "types": [
         "Veneno"
     ],
@@ -3351,7 +3351,7 @@
     "name": "Nidorina",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/31/latest/20230613021249/Nidorina.png/200px-Nidorina.png",
     "gen": 1,
-    "category": "Pin veneno",
+    "category": "",
     "types": [
         "Veneno"
     ],
@@ -3605,7 +3605,7 @@
     "name": "Nidoran\u2642",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/60/latest/20230613021056/Nidoran%E2%99%82.png/200px-Nidoran%E2%99%82.png",
     "gen": 1,
-    "category": "Pin veneno",
+    "category": "",
     "types": [
         "Veneno"
     ],
@@ -3724,7 +3724,7 @@
     "name": "Nidorino",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/7a/latest/20230613021105/Nidorino.png/200px-Nidorino.png",
     "gen": 1,
-    "category": "Pin veneno",
+    "category": "",
     "types": [
         "Veneno"
     ],
@@ -5016,7 +5016,7 @@
     "name": "Oddish",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/d9/latest/20230617054434/Oddish.png/200px-Oddish.png",
     "gen": 1,
-    "category": "Hierbajo",
+    "category": "",
     "types": [
         "Planta",
         "Veneno"
@@ -5140,7 +5140,7 @@
     "name": "Gloom",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/59/latest/20230617054450/Gloom.png/200px-Gloom.png",
     "gen": 1,
-    "category": "Hierbajo",
+    "category": "",
     "types": [
         "Planta",
         "Veneno"
@@ -6090,7 +6090,7 @@
     "name": "Meowth",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/99/latest/20160904210550/Meowth.png/200px-Meowth.png",
     "gen": 1,
-    "category": "Gato ara\u00f1a",
+    "category": "",
     "types": [
         "Normal"
     ],
@@ -6208,7 +6208,7 @@
     "name": "Persian",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/b3/latest/20230206193723/Persian.png/200px-Persian.png",
     "gen": 1,
-    "category": "Gato fino",
+    "category": "",
     "types": [
         "Normal"
     ],
@@ -9130,7 +9130,7 @@
     "name": "Ponyta",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/5f/latest/20230628041337/Ponyta.png/200px-Ponyta.png",
     "gen": 1,
-    "category": "Caballo Fuego",
+    "category": "",
     "types": [
         "Fuego"
     ],
@@ -9223,7 +9223,7 @@
     "name": "Rapidash",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/01/latest/20201112163200/Rapidash.png/200px-Rapidash.png",
     "gen": 1,
-    "category": "Caballo Fuego",
+    "category": "",
     "types": [
         "Fuego"
     ],
@@ -11882,7 +11882,7 @@
     "name": "Kingler",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a4/latest/20200720120836/Kingler.png/200px-Kingler.png",
     "gen": 1,
-    "category": "Tenaza",
+    "category": "",
     "types": [
         "Agua"
     ],
@@ -14310,7 +14310,7 @@
     "name": "Goldeen",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/99/latest/20230702052345/Goldeen.png/200px-Goldeen.png",
     "gen": 1,
-    "category": "Pez color",
+    "category": "",
     "types": [
         "Agua"
     ],
@@ -14423,7 +14423,7 @@
     "name": "Seaking",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/8b/latest/20230702052356/Seaking.png/200px-Seaking.png",
     "gen": 1,
-    "category": "Pez color",
+    "category": "",
     "types": [
         "Agua"
     ],
@@ -17281,7 +17281,7 @@
     "name": "Snorlax",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/0b/latest/20160904204605/Snorlax.png/200px-Snorlax.png",
     "gen": 1,
-    "category": "Dormir",
+    "category": "",
     "types": [
         "Normal"
     ],
@@ -17469,7 +17469,7 @@
     "name": "Articuno",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/52/latest/20160316192008/Articuno.png/200px-Articuno.png",
     "gen": 1,
-    "category": "Congelar",
+    "category": "",
     "types": [
         "Hielo",
         "Volador"
@@ -18710,7 +18710,7 @@
     "name": "Meganium",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/40/latest/20230523204410/Meganium.png/200px-Meganium.png",
     "gen": 2,
-    "category": "Hierba",
+    "category": "",
     "types": [
         "Planta"
     ],
@@ -18853,7 +18853,7 @@
     "name": "Cyndaquil",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/99/latest/20200307021608/Cyndaquil.png/200px-Cyndaquil.png",
     "gen": 2,
-    "category": "Rat\u00f3n Fuego",
+    "category": "",
     "types": [
         "Fuego"
     ],
@@ -19730,7 +19730,7 @@
     "name": "Furret",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/de/latest/20210503201308/Furret.png/200px-Furret.png",
     "gen": 2,
-    "category": "Alargado",
+    "category": "",
     "types": [
         "Normal"
     ],
@@ -20118,7 +20118,7 @@
     "name": "Ledyba",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a8/latest/20230627210020/Ledyba.png/200px-Ledyba.png",
     "gen": 2,
-    "category": "5 Estrellas",
+    "category": "",
     "types": [
         "Bicho",
         "Volador"
@@ -20245,7 +20245,7 @@
     "name": "Ledian",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/ee/latest/20230627210039/Ledian.png/200px-Ledian.png",
     "gen": 2,
-    "category": "5 Estrellas",
+    "category": "",
     "types": [
         "Bicho",
         "Volador"
@@ -20742,7 +20742,7 @@
     "name": "Chinchou",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/b1/latest/20151017013911/Chinchou.png/200px-Chinchou.png",
     "gen": 2,
-    "category": "Rape",
+    "category": "",
     "types": [
         "Agua",
         "El\u00e9ctrico"
@@ -21338,7 +21338,7 @@
     "name": "Togepi",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/ff/latest/20201109211603/Togepi.png/200px-Togepi.png",
     "gen": 2,
-    "category": "Bolapicuda",
+    "category": "",
     "types": [
         "Hada"
     ],
@@ -22266,7 +22266,7 @@
     "name": "Marill",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/55/latest/20160309224636/Marill.png/200px-Marill.png",
     "gen": 2,
-    "category": "Rat\u00f3n Agua",
+    "category": "",
     "types": [
         "Agua",
         "Hada"
@@ -22407,7 +22407,7 @@
     "name": "Azumarill",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/1a/latest/20230130213756/Azumarill.png/200px-Azumarill.png",
     "gen": 2,
-    "category": "Conejo Agua",
+    "category": "",
     "types": [
         "Agua",
         "Hada"
@@ -23774,7 +23774,7 @@
     "name": "Wooper",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/42/latest/20160703191603/Wooper.png/200px-Wooper.png",
     "gen": 2,
-    "category": "Pez agua",
+    "category": "",
     "types": [
         "Agua",
         "Tierra"
@@ -23895,7 +23895,7 @@
     "name": "Quagsire",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/1b/latest/20230704000824/Quagsire.png/200px-Quagsire.png",
     "gen": 2,
-    "category": "Pez agua",
+    "category": "",
     "types": [
         "Agua",
         "Tierra"
@@ -24667,7 +24667,7 @@
     "name": "Wobbuffet",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/cf/latest/20160625152946/Wobbuffet.png/200px-Wobbuffet.png",
     "gen": 2,
-    "category": "Paciente",
+    "category": "",
     "types": [
         "Ps\u00edquico"
     ],
@@ -24914,7 +24914,7 @@
     "name": "Pineco",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/da/latest/20230629033855/Pineco.png/200px-Pineco.png",
     "gen": 2,
-    "category": "Larva",
+    "category": "",
     "types": [
         "Bicho"
     ],
@@ -25036,7 +25036,7 @@
     "name": "Forretress",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/d6/latest/20230629033900/Forretress.png/200px-Forretress.png",
     "gen": 2,
-    "category": "Larva",
+    "category": "",
     "types": [
         "Bicho",
         "Acero"
@@ -25990,7 +25990,7 @@
     "name": "Scizor",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/87/latest/20150621184919/Scizor.png/200px-Scizor.png",
     "gen": 2,
-    "category": "Tenaza",
+    "category": "",
     "types": [
         "Bicho",
         "Acero"
@@ -26629,7 +26629,7 @@
     "name": "Ursaring",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/61/latest/20230613022221/Ursaring.png/200px-Ursaring.png",
     "gen": 2,
-    "category": "Hibernante",
+    "category": "",
     "types": [
         "Normal"
     ],
@@ -27581,7 +27581,7 @@
     "name": "Delibird",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/4f/latest/20230613015211/Delibird.png/200px-Delibird.png",
     "gen": 2,
-    "category": "Reparto",
+    "category": "",
     "types": [
         "Hielo",
         "Volador"
@@ -27683,7 +27683,7 @@
     "name": "Mantine",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/99/latest/20170325003700/Mantine.png/200px-Mantine.png",
     "gen": 2,
-    "category": "Milano",
+    "category": "",
     "types": [
         "Agua",
         "Volador"
@@ -28261,7 +28261,7 @@
     "name": "Phanpy",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/9f/latest/20230629034527/Phanpy.png/200px-Phanpy.png",
     "gen": 2,
-    "category": "Narizotas",
+    "category": "",
     "types": [
         "Tierra"
     ],
@@ -28811,7 +28811,7 @@
     "name": "Tyrogue",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/b0/latest/20230707040121/Tyrogue.png/200px-Tyrogue.png",
     "gen": 2,
-    "category": "Pele\u00f3n",
+    "category": "",
     "types": [
         "Lucha"
     ],
@@ -29273,7 +29273,7 @@
     "name": "Magby",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/42/latest/20230629034211/Magby.png/200px-Magby.png",
     "gen": 2,
-    "category": "Ascuas",
+    "category": "",
     "types": [
         "Fuego"
     ],
@@ -29395,7 +29395,7 @@
     "name": "Miltank",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/b9/latest/20211026180227/Miltank.png/200px-Miltank.png",
     "gen": 2,
-    "category": "Lechera",
+    "category": "",
     "types": [
         "Normal"
     ],
@@ -30102,7 +30102,7 @@
     "name": "Larvitar",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/71/latest/20230629034146/Larvitar.png/200px-Larvitar.png",
     "gen": 2,
-    "category": "Piel roca",
+    "category": "",
     "types": [
         "Roca",
         "Tierra"
@@ -30725,7 +30725,7 @@
     "name": "Celebi",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e4/latest/20141012193327/Celebi.png/200px-Celebi.png",
     "gen": 2,
-    "category": "Viajetiempo",
+    "category": "",
     "types": [
         "Ps\u00edquico",
         "Planta"
@@ -30839,7 +30839,7 @@
     "name": "Treecko",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/b8/latest/20230706064337/Treecko.png/200px-Treecko.png",
     "gen": 3,
-    "category": "Geco Bosque",
+    "category": "",
     "types": [
         "Planta"
     ],
@@ -30967,7 +30967,7 @@
     "name": "Grovyle",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/6a/latest/20141013213057/Grovyle.png/200px-Grovyle.png",
     "gen": 3,
-    "category": "Geco bosque",
+    "category": "",
     "types": [
         "Planta"
     ],
@@ -33913,7 +33913,7 @@
     "name": "Taillow",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a3/latest/20170422203719/Taillow.png/200px-Taillow.png",
     "gen": 3,
-    "category": "Pequebuche",
+    "category": "",
     "types": [
         "Normal",
         "Volador"
@@ -34032,7 +34032,7 @@
     "name": "Swellow",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/71/latest/20190407130058/Swellow.png/200px-Swellow.png",
     "gen": 3,
-    "category": "Buche",
+    "category": "",
     "types": [
         "Normal",
         "Volador"
@@ -34288,7 +34288,7 @@
     "name": "Pelipper",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/8a/latest/20190407130507/Pelipper.png/200px-Pelipper.png",
     "gen": 3,
-    "category": "Ave agua",
+    "category": "",
     "types": [
         "Agua",
         "Volador"
@@ -34573,7 +34573,7 @@
     "name": "Kirlia",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/25/latest/20141113231924/Kirlia.png/200px-Kirlia.png",
     "gen": 3,
-    "category": "Sensorio",
+    "category": "",
     "types": [
         "Ps\u00edquico",
         "Hada"
@@ -34958,7 +34958,7 @@
     "name": "Masquerain",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/43/latest/20190407131007/Masquerain.png/200px-Masquerain.png",
     "gen": 3,
-    "category": "Globocular",
+    "category": "",
     "types": [
         "Bicho",
         "Volador"
@@ -35345,7 +35345,7 @@
     "name": "Slakoth",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e3/latest/20190407140208/Slakoth.png/200px-Slakoth.png",
     "gen": 3,
-    "category": "Gandul",
+    "category": "",
     "types": [
         "Normal"
     ],
@@ -36768,7 +36768,7 @@
     "name": "Azurill",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/ca/latest/20160830194037/Azurill.png/200px-Azurill.png",
     "gen": 3,
-    "category": "A topos",
+    "category": "",
     "types": [
         "Normal",
         "Hada"
@@ -37135,7 +37135,7 @@
     "name": "Delcatty",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/3e/latest/20190407233651/Delcatty.png/200px-Delcatty.png",
     "gen": 3,
-    "category": "Cursi",
+    "category": "",
     "types": [
         "Normal"
     ],
@@ -37526,7 +37526,7 @@
     "name": "Aron",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/30/latest/20190408204335/Aron.png/200px-Aron.png",
     "gen": 3,
-    "category": "Coraza F\u00e9rrea",
+    "category": "",
     "types": [
         "Acero",
         "Roca"
@@ -37668,7 +37668,7 @@
     "name": "Lairon",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a4/latest/20190408204738/Lairon.png/200px-Lairon.png",
     "gen": 3,
-    "category": "Coraza F\u00e9rrea",
+    "category": "",
     "types": [
         "Acero",
         "Roca"
@@ -37810,7 +37810,7 @@
     "name": "Aggron",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/1e/latest/20200720151004/Aggron.png/200px-Aggron.png",
     "gen": 3,
-    "category": "Coraza F\u00e9rrea",
+    "category": "",
     "types": [
         "Acero",
         "Roca"
@@ -39530,7 +39530,7 @@
     "name": "Sharpedo",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/b0/latest/20141214185015/Sharpedo.png/200px-Sharpedo.png",
     "gen": 3,
-    "category": "Voraz",
+    "category": "",
     "types": [
         "Agua",
         "Siniestro"
@@ -39788,7 +39788,7 @@
     "name": "Wailord",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/89/latest/20190416212845/Wailord.png/200px-Wailord.png",
     "gen": 3,
-    "category": "Ballenaflot",
+    "category": "",
     "types": [
         "Agua"
     ],
@@ -40058,7 +40058,7 @@
     "name": "Camerupt",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a6/latest/20141123211029/Camerupt.png/200px-Camerupt.png",
     "gen": 3,
-    "category": "Erupci\u00f3n",
+    "category": "",
     "types": [
         "Fuego",
         "Tierra"
@@ -40578,7 +40578,7 @@
     "name": "Spinda",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/3b/latest/20190427162442/Spinda.png/200px-Spinda.png",
     "gen": 3,
-    "category": "Panda topos",
+    "category": "",
     "types": [
         "Normal"
     ],
@@ -41441,7 +41441,7 @@
     "name": "Swablu",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/2b/latest/20230628040518/Swablu.png/200px-Swablu.png",
     "gen": 3,
-    "category": "Ave algod\u00f3n",
+    "category": "",
     "types": [
         "Normal",
         "Volador"
@@ -42819,7 +42819,7 @@
     "name": "Baltoy",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/fa/latest/20230717202601/Baltoy.png/200px-Baltoy.png",
     "gen": 3,
-    "category": "Mu\u00f1eca Barro",
+    "category": "",
     "types": [
         "Tierra",
         "Ps\u00edquico"
@@ -42958,7 +42958,7 @@
     "name": "Claydol",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/ec/latest/20230717202614/Claydol.png/200px-Claydol.png",
     "gen": 3,
-    "category": "Mu\u00f1eca Barro",
+    "category": "",
     "types": [
         "Tierra",
         "Ps\u00edquico"
@@ -45118,7 +45118,7 @@
     "name": "Snorunt",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/2d/latest/20230410184909/Snorunt.png/200px-Snorunt.png",
     "gen": 3,
-    "category": "Gorro nieve",
+    "category": "",
     "types": [
         "Hielo"
     ],
@@ -46599,7 +46599,7 @@
     "name": "Beldum",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/f5/latest/20141214182626/Beldum.png/200px-Beldum.png",
     "gen": 3,
-    "category": "Bola hierro",
+    "category": "",
     "types": [
         "Acero",
         "Ps\u00edquico"
@@ -46659,7 +46659,7 @@
     "name": "Metang",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/fb/latest/20141214182019/Metang.png/200px-Metang.png",
     "gen": 3,
-    "category": "Garra Hierro",
+    "category": "",
     "types": [
         "Acero",
         "Ps\u00edquico"
@@ -46774,7 +46774,7 @@
     "name": "Metagross",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/95/latest/20141214183056/Metagross.png/200px-Metagross.png",
     "gen": 3,
-    "category": "Pata hierro",
+    "category": "",
     "types": [
         "Acero",
         "Ps\u00edquico"
@@ -46894,7 +46894,7 @@
     "name": "Regirock",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/bd/latest/20141113214139/Regirock.png/200px-Regirock.png",
     "gen": 3,
-    "category": "Pico roca",
+    "category": "",
     "types": [
         "Roca"
     ],
@@ -47554,7 +47554,7 @@
     "name": "Kyogre",
     "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/f3/latest/20150621183339/Kyogre.png/200px-Kyogre.png",
     "gen": 3,
-    "category": "Cuenca mar",
+    "category": "",
     "types": [
         "Agua"
     ],

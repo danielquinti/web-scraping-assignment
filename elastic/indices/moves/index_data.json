@@ -5148,7 +5148,7 @@
 },
 {
     "number": 430,
-    "name": "Foco resplandor",
+    "name": "Ca\u00f1\u00f3n resplandor",
     "name_english": "Flash Cannon",
     "generation": 4,
     "description": "El usuario concentra toda la luz del cuerpo y la libera. Puede reducir la Defensa Especial del objetivo.",
@@ -9987,7 +9987,7 @@
     "name": "Teraexplosi\u00f3n",
     "name_english": "Tera Blast",
     "generation": 9,
-    "description": "Si el usuario se ha teracristalizado, ataca con la energ\u00eda de su teratipo. Compara sus valores de Ataque y Ataque Especial para infligir da\u00f1o con el m\u00e1s alto de los dos. 189 Inflige da\u00f1o con el valor m\u00e1s alto entre Ataque y Ataque Especial, pero reduce ambas caracter\u00edsticas del usuario. Si el objetivo se ha teracristalizado, es supereficaz.",
+    "description": "Si el usuario se ha teracristalizado, ataca con la energ\u00eda de su teratipo. Compara sus valores de Ataque y Ataque Especial para infligir da\u00f1o con el m\u00e1s alto de los dos. 190 Inflige da\u00f1o con el valor m\u00e1s alto entre Ataque y Ataque Especial, pero reduce ambas caracter\u00edsticas del usuario. Si el objetivo se ha teracristalizado, es supereficaz.",
     "movement_type": "normal",
     "movement_class": "especial",
     "movement_damage": 80,
