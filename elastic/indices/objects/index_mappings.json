@@ -7,7 +7,7 @@
       },
       "name": {
 		"type": "text",
-		"analyzer": "folding_spanish"
+		"analyzer": "spanish"
       },
       "name_english": {
 		"type": "text",
@@ -19,7 +19,7 @@
       },
       "description": {
 		"type": "text",
-		"analyzer": "folding_spanish"
+		"analyzer": "spanish"
       }
     }
   }
