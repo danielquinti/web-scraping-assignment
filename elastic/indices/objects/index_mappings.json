@@ -12,7 +12,8 @@
       },
       "name_english": {
         "type": "text",
-        "analyzer": "english"
+        "analyzer": "rebuilt_english_ngram",
+        "search_analyzer": "rebuilt_english"
       },
       "generation": {
         "type": "integer"
