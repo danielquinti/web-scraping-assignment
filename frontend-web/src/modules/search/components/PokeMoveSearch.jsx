@@ -33,8 +33,14 @@ const PokeMoveSearch = () => {
             mustQueries.push({
                 bool: {
                     should: [
-                        { match: { name: keyword.trim() } },
-                        { match: { name_english: keyword.trim() } }
+                        { match: { name: {
+                            query: keyword.trim(),
+                            operator: "and",
+                        } } },
+                        { match: { name_english: {
+                            query: keyword.trim(),
+                            operator: "and",
+                        } } }
                     ]
                 }
             });
@@ -43,7 +49,10 @@ const PokeMoveSearch = () => {
         // Búsqueda por descripcion
         if (descriptionKeyword.trim() !== '') {
             mustQueries.push({
-                match: { description: descriptionKeyword.trim() }
+                match: { description: {
+                    query: descriptionKeyword.trim(),
+                    operator: "and",
+                } }
             });
         }
 

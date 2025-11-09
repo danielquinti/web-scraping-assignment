@@ -54,7 +54,10 @@ const PokeSearch = () => {
         // Búsqueda por nombre
         if (keywords.trim() !== '') {
             mustQueries.push({
-                match: { name: keywords.trim() }
+                match: { name: {
+                    query: keywords.trim(),
+                    operator: "and",
+                } }
             });
         }
 
@@ -100,7 +103,10 @@ const PokeSearch = () => {
         // Filtro por categoría
         if (categoryKeyword.trim() !== '') {
             mustQueries.push({
-                match: { category: categoryKeyword.trim() }
+                match: { category: {
+                    query: categoryKeyword.trim(),
+                    operator: "and"
+                } }
             });
         }
 
@@ -109,8 +115,14 @@ const PokeSearch = () => {
             mustQueries.push({
                 bool: {
                     should: [
-                        { match: { abilities: abilityKeyword.trim() } },
-                        { match: { hidden_abilities: abilityKeyword.trim() } }
+                        { match: { abilities: {
+                            query: abilityKeyword.trim(),
+                            operator: "and",
+                        } } },
+                        { match: { hidden_abilities: {
+                            query: abilityKeyword.trim(),
+                            operator: "and",
+                        } } }
                     ]
                 }
             });
