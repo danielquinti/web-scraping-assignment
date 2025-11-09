@@ -1,7 +1,3 @@
-# Pokémon Web Scrapping
-
-Lorem ipsum
-
 ## Installation
 
 Install 
@@ -49,7 +45,7 @@ https://chromewebstore.google.com/detail/multi-elasticsearch-heads/cpmmilfkofbei
 ### Run
 
 ```
-cd frontend-web
-npm install (only first time to download libraries)
+cd frontend-web && \
+npm install && \
 npm run dev
 ```
