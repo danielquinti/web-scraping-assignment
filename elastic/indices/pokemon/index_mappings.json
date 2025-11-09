@@ -7,7 +7,7 @@
             "name": {
                 "type": "text",
                 "analyzer": "rebuilt_spanish_ngram",
-                "search_analyzer": "rebuilt_spanish_ngram"
+                "search_analyzer": "rebuilt_spanish"
             },
             "image_url": {
                 "type": "keyword",
@@ -19,7 +19,7 @@
             "category": {
                 "type": "text",
                 "analyzer": "rebuilt_spanish_ngram",
-                "search_analyzer": "rebuilt_spanish_ngram"
+                "search_analyzer": "rebuilt_spanish"
             },
             "types": {
                 "type": "keyword"
@@ -27,11 +27,12 @@
             "abilities": {
                 "type": "text",
                 "analyzer": "rebuilt_spanish_ngram",
-                "search_analyzer": "rebuilt_spanish_ngram"
+                "search_analyzer": "rebuilt_spanish"
             },
             "hidden_abilities": {
                 "type": "text",
-                "analyzer": "spanish"
+                "analyzer": "rebuilt_spanish_ngram",
+                "search_analyzer": "rebuilt_spanish"
             },
             "egg_groups": {
                 "type": "keyword"
@@ -60,7 +61,7 @@
                     "name": {
                         "type": "text",
                         "analyzer": "rebuilt_spanish_ngram",
-                        "search_analyzer": "rebuilt_spanish_ngram"
+                        "search_analyzer": "rebuilt_spanish"
                     },
                     "type": {
                         "type": "keyword"

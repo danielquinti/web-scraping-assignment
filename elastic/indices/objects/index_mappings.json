@@ -8,7 +8,7 @@
       "name": {
         "type": "text",
         "analyzer": "rebuilt_spanish_ngram",
-        "search_analyzer": "rebuilt_spanish_ngram"
+        "search_analyzer": "rebuilt_spanish"
       },
       "name_english": {
         "type": "text",
@@ -20,7 +20,7 @@
       "description": {
         "type": "text",
         "analyzer": "rebuilt_spanish_ngram",
-        "search_analyzer": "rebuilt_spanish_ngram"
+        "search_analyzer": "rebuilt_spanish"
       }
     }
   }
