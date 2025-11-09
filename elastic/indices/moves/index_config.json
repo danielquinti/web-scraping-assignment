@@ -1,4 +1,49 @@
 {
     "number_of_shards": 1,
-    "number_of_replicas": 0
+    "number_of_replicas": 0,
+    "analysis": {
+        "filter": {
+            "spanish_stop": {
+                "type": "stop",
+                "stopwords": "_spanish_"
+            },
+            "spanish_keywords": {
+                "type": "keyword_marker",
+                "keywords": [
+                    "ejemplo"
+                ]
+            },
+            "spanish_stemmer": {
+                "type": "stemmer",
+                "language": "light_spanish"
+            },
+            "spanish_ngram": {
+                "type": "ngram",
+                "min_gram": 3,
+                "max_gram": 4
+            }
+        },
+        "analyzer": {
+            "rebuilt_spanish": {
+                "tokenizer": "standard",
+                "filter": [
+                    "lowercase",
+                    "spanish_stop",
+                    "spanish_keywords",
+                    "spanish_stemmer"
+                ]
+            },
+            "rebuilt_spanish_ngram": {
+                "tokenizer": "standard",
+                "filter": [
+                    "lowercase",
+                    "spanish_stop",
+                    "spanish_keywords",
+                    "spanish_stemmer",
+                    "spanish_ngram"
+                ],
+                "search_analyzer": "rebuilt_spanish"
+            }
+        }
+    }
 }

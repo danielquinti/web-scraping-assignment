@@ -5,19 +5,21 @@
         "type": "integer"
       },
       "name": {
-		"type": "text",
-		"analyzer": "spanish"
+        "type": "text",
+        "analyzer": "rebuilt_spanish_ngram",
+        "search_analyzer": "rebuilt_spanish_ngram"
       },
       "name_english": {
-		"type": "text",
-		"analyzer": "english" 
+        "type": "text",
+        "analyzer": "english"
       },
       "generation": {
         "type": "integer"
       },
       "description": {
-		"type": "text",
-		"analyzer": "spanish"
+        "type": "text",
+        "analyzer": "rebuilt_spanish_ngram",
+        "search_analyzer": "rebuilt_spanish_ngram"
       },
       "movement_type": {
         "type": "keyword"
