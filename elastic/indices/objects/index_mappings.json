@@ -6,20 +6,22 @@
         "index": false
       },
       "name": {
-		"type": "text",
-		"analyzer": "spanish"
+        "type": "text",
+        "analyzer": "rebuilt_spanish_ngram",
+        "search_analyzer": "rebuilt_spanish"
       },
       "name_english": {
-		"type": "text",
-		"analyzer": "english" 
-
+        "type": "text",
+        "analyzer": "rebuilt_english_ngram",
+        "search_analyzer": "rebuilt_english"
       },
       "generation": {
         "type": "integer"
       },
       "description": {
-		"type": "text",
-		"analyzer": "spanish"
+        "type": "text",
+        "analyzer": "rebuilt_spanish_ngram",
+        "search_analyzer": "rebuilt_spanish"
       }
     }
   }
