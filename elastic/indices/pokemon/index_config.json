@@ -23,6 +23,7 @@
                 "tokenizer": "standard",
                 "filter": [
                     "lowercase",
+                    "asciifolding",
                     "spanish_stop",
                     "spanish_stemmer"
                 ]
@@ -31,6 +32,7 @@
                 "tokenizer": "standard",
                 "filter": [
                     "lowercase",
+                    "asciifolding",
                     "spanish_stop",
                     "spanish_stemmer",
                     "custom_ngram"
