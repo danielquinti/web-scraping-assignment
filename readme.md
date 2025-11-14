@@ -32,6 +32,7 @@ python3 create_and_populate_index.py --content indices/moves/index_data.json --i
 python3 create_and_populate_index.py --content indices/objects/index_data.json --index objects --mapping-file  indices/objects/index_mappings.json --settings indices/objects/index_config.json --recreate && \
 cd ..
 ```
+Es probable que desde el levantamiento de la imagen docker a que este iniciada elastic haya que dejar unos segundos.
 
 ### Index monitoring
 https://chromewebstore.google.com/detail/multi-elasticsearch-heads/cpmmilfkofbeimbmgiclohpodggeheim
