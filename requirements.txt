@@ -1,0 +1,4 @@
+elasticsearch>=9.1.5
+scrapy
+beautifulsoup4
+lxml

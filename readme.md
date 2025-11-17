@@ -1,7 +1,12 @@
 ## Installation
+From the root directory, run
+```bash
+python3 -m venv venv && \
+source venv/bin/activate && \
+python -m pip install --upgrade pip && \
+pip install -r requirements.txt
+```
 
-Install 
-Requirements: docker, scrapy, elastic
 
 ## Usage
 
@@ -43,7 +48,7 @@ https://chromewebstore.google.com/detail/multi-elasticsearch-heads/cpmmilfkofbei
 
 ### Run
 
-```
+```bash
 cd frontend-web && \
 npm install && \
 npm run dev
